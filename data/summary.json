@@ -2458,5 +2458,50 @@
     "most_6s": "Same for both Innings",
     "wickets_lost_ou": "N/A",
     "meeting_code": "KIRON4-2026-06-24-284040-3219"
+  },
+  {
+    "date": "2026-06-24",
+    "time": "18:40:00",
+    "match_name": "Super Over Bangalore v Hyderabad",
+    "winner": "Bangalore wins the match",
+    "first_ball_1st_innings": "Runs",
+    "first_ball_2nd_innings": "Wicket",
+    "total_runs_ou": "(30.5) - Under",
+    "total_4s_ou": "(2.5) - Under",
+    "total_6s_ou": "(2.5) - Over",
+    "most_4s": "Same for both Innings",
+    "most_6s": "1st Innings",
+    "wickets_lost_ou": "N/A",
+    "meeting_code": "KIRON4-2026-06-24-284041-3220"
+  },
+  {
+    "date": "2026-06-24",
+    "time": "18:44:00",
+    "match_name": "Super Over Delhi v Rajasthan",
+    "winner": "Delhi wins the match",
+    "first_ball_1st_innings": "Wicket",
+    "first_ball_2nd_innings": "Runs",
+    "total_runs_ou": "(20.5) - Under",
+    "total_4s_ou": "(2.5) - Under",
+    "total_6s_ou": "(2.5) - Under",
+    "most_4s": "Same for both Innings",
+    "most_6s": "Same for both Innings",
+    "wickets_lost_ou": "N/A",
+    "meeting_code": "KIRON4-2026-06-24-284042-3221"
+  },
+  {
+    "date": "2026-06-24",
+    "time": "18:48:00",
+    "match_name": "Super Over Chennai v Punjab",
+    "winner": "Chennai wins the match",
+    "first_ball_1st_innings": "Wicket",
+    "first_ball_2nd_innings": "No-Ball",
+    "total_runs_ou": "(30.5) - Over",
+    "total_4s_ou": "(2.5) - Over",
+    "total_6s_ou": "(2.5) - Over",
+    "most_4s": "2nd Innings",
+    "most_6s": "Same for both Innings",
+    "wickets_lost_ou": "N/A",
+    "meeting_code": "KIRON4-2026-06-24-284043-3222"
   }
 ]
