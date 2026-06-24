@@ -4,6 +4,8 @@ on:
   schedule:
     - cron: '*/5 * * * *'  # Run every 5 minutes
   workflow_dispatch:      # Enable manual triggering from GitHub UI
+  repository_dispatch:    # Enable triggering via external API calls
+    types: [trigger-scraper]
 
 jobs:
   run-tracker:
