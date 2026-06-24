@@ -1,0 +1,13 @@
+# =========================================================================
+# Rotating Proxies list (one proxy per line)
+# Copy this file to 'proxies.txt' and list your proxies.
+# Lines starting with '#' are ignored.
+# =========================================================================
+
+# Example format with authentication:
+# http://username:password@ip_address:port
+# http://anotheruser:anotherpass@ip_address2:port2
+
+# Example format without authentication:
+# http://ip_address:port
+# http://ip_address2:port2

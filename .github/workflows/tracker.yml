@@ -32,6 +32,9 @@ jobs:
         run: python tracker.py
         env:
           GITHUB_ACTIONS: 'true' # Enforces single-run mode in tracker.py
+          PROXY_URL: ${{ secrets.PROXY_URL }}
+          SCRAPER_API_KEY: ${{ secrets.SCRAPER_API_KEY }}
+          ZENROWS_API_KEY: ${{ secrets.ZENROWS_API_KEY }}
 
       - name: Commit and Push Updates
         run: |

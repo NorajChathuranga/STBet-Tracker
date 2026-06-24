@@ -285,17 +285,98 @@ def append_to_csvs(new_meetings):
     except PermissionError:
         print(f"[{datetime.now().strftime('%H:%M:%S')}] WARNING: Permission denied writing to CSV files.")
 
+def load_env_file():
+    """Manually parse .env file if it exists to avoid external dependencies like python-dotenv."""
+    env_path = os.path.join(WORKSPACE_DIR, '.env')
+    if os.path.exists(env_path):
+        try:
+            with open(env_path, 'r', encoding='utf-8') as f:
+                for line in f:
+                    line = line.strip()
+                    if line and not line.startswith('#') and '=' in line:
+                        key, val = line.split('=', 1)
+                        key = key.strip()
+                        val = val.strip().strip("'").strip('"')
+                        os.environ[key] = val
+            print(f"[{datetime.now().strftime('%H:%M:%S')}] Loaded environment variables from .env file.")
+        except Exception as e:
+            print(f"Error loading .env file: {e}")
+
+def fetch_url_data(url):
+    """Fetches JSON data from the target URL, using proxies or direct connection as configured."""
+    proxy_url = os.environ.get('PROXY_URL')
+    scraper_api_key = os.environ.get('SCRAPER_API_KEY')
+    zenrows_api_key = os.environ.get('ZENROWS_API_KEY')
+    
+    # 1. ScraperAPI (https://www.scraperapi.com)
+    if scraper_api_key:
+        print(f"[{datetime.now().strftime('%H:%M:%S')}] Fetching via ScraperAPI...")
+        scraper_url = f"http://api.scraperapi.com?api_key={scraper_api_key}&url={url}"
+        return requests.get(scraper_url, timeout=30)
+        
+    # 2. ZenRows (https://www.zenrows.com)
+    if zenrows_api_key:
+        print(f"[{datetime.now().strftime('%H:%M:%S')}] Fetching via ZenRows...")
+        zenrows_url = "https://api.zenrows.com/v1/"
+        params = {
+            'apikey': zenrows_api_key,
+            'url': url,
+            'premium_proxy': 'true',
+            'proxy_country': 'us'
+        }
+        return requests.get(zenrows_url, params=params, timeout=30)
+        
+    # 3. Standard HTTP/HTTPS Proxy (e.g. Webshare rotating proxy)
+    if proxy_url:
+        clean_display_url = proxy_url.split('@')[-1] if '@' in proxy_url else proxy_url
+        print(f"[{datetime.now().strftime('%H:%M:%S')}] Fetching via configured proxy: {clean_display_url}")
+        proxies = {
+            "http": proxy_url,
+            "https": proxy_url
+        }
+        return requests.get(url, headers=HEADERS, proxies=proxies, timeout=20)
+
+    # 4. Fallback to local proxies.txt file
+    proxies_txt_path = os.path.join(WORKSPACE_DIR, 'proxies.txt')
+    if os.path.exists(proxies_txt_path):
+        try:
+            with open(proxies_txt_path, 'r', encoding='utf-8') as f:
+                lines = [line.strip() for line in f if line.strip() and not line.strip().startswith('#')]
+            if lines:
+                import random
+                selected_proxy = random.choice(lines)
+                clean_display = selected_proxy.split('@')[-1] if '@' in selected_proxy else selected_proxy
+                print(f"[{datetime.now().strftime('%H:%M:%S')}] Fetching via random proxy from proxies.txt: {clean_display}")
+                proxies = {
+                    "http": selected_proxy,
+                    "https": selected_proxy
+                }
+                return requests.get(url, headers=HEADERS, proxies=proxies, timeout=15)
+        except Exception as e:
+            print(f"[{datetime.now().strftime('%H:%M:%S')}] Error reading proxies.txt: {e}")
+            
+    # 5. Direct connection (default fallback)
+    print(f"[{datetime.now().strftime('%H:%M:%S')}] Fetching via direct connection (no proxy)...")
+    return requests.get(url, headers=HEADERS, timeout=15)
+
 def check_and_update():
-    print(f"[{datetime.now().strftime('%H:%M:%S')}] Fetching from API: {URL}")
     try:
-        response = requests.get(URL, headers=HEADERS, timeout=15)
+        response = fetch_url_data(URL)
         if response.status_code not in [200, 202]:
             print(f"API Error: HTTP status {response.status_code}")
+            try:
+                print(f"Response preview: {response.text[:200]}")
+            except Exception:
+                pass
             return False
             
         data = response.json()
         if not isinstance(data, list):
             print("API Error: Expected a list of meetings, got something else.")
+            try:
+                print(f"Response preview: {response.text[:200]}")
+            except Exception:
+                pass
             return False
             
         meetings_dict = load_meetings()
@@ -346,6 +427,7 @@ def git_commit_and_push():
         print(f"[{datetime.now().strftime('%H:%M:%S')}] Error auto-committing/pushing: {e}")
 
 def main():
+    load_env_file()
     migrate_root_files()
     write_initial_headers()
     
