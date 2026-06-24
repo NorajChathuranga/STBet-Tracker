@@ -303,20 +303,20 @@ def load_env_file():
             print(f"Error loading .env file: {e}")
 
 def fetch_url_data(url):
-    """Fetches JSON data from the target URL, using proxies or direct connection as configured."""
+    """Fetches JSON data from the target URL, trying configured proxy providers sequentially until one succeeds."""
     proxy_url = os.environ.get('PROXY_URL')
     scraper_api_key = os.environ.get('SCRAPER_API_KEY')
     zenrows_api_key = os.environ.get('ZENROWS_API_KEY')
     
+    attempts = []
+    
     # 1. ScraperAPI (https://www.scraperapi.com)
     if scraper_api_key:
-        print(f"[{datetime.now().strftime('%H:%M:%S')}] Fetching via ScraperAPI...")
         scraper_url = f"http://api.scraperapi.com?api_key={scraper_api_key}&url={url}"
-        return requests.get(scraper_url, timeout=30)
+        attempts.append(('ScraperAPI', lambda: requests.get(scraper_url, timeout=30)))
         
     # 2. ZenRows (https://www.zenrows.com)
     if zenrows_api_key:
-        print(f"[{datetime.now().strftime('%H:%M:%S')}] Fetching via ZenRows...")
         zenrows_url = "https://api.zenrows.com/v1/"
         params = {
             'apikey': zenrows_api_key,
@@ -324,17 +324,16 @@ def fetch_url_data(url):
             'premium_proxy': 'true',
             'proxy_country': 'us'
         }
-        return requests.get(zenrows_url, params=params, timeout=30)
+        attempts.append(('ZenRows', lambda: requests.get(zenrows_url, params=params, timeout=30)))
         
     # 3. Standard HTTP/HTTPS Proxy (e.g. Webshare rotating proxy)
     if proxy_url:
         clean_display_url = proxy_url.split('@')[-1] if '@' in proxy_url else proxy_url
-        print(f"[{datetime.now().strftime('%H:%M:%S')}] Fetching via configured proxy: {clean_display_url}")
         proxies = {
             "http": proxy_url,
             "https": proxy_url
         }
-        return requests.get(url, headers=HEADERS, proxies=proxies, timeout=20)
+        attempts.append((f'Proxy ({clean_display_url})', lambda: requests.get(url, headers=HEADERS, proxies=proxies, timeout=20)))
 
     # 4. Fallback to local proxies.txt file
     proxies_txt_path = os.path.join(WORKSPACE_DIR, 'proxies.txt')
@@ -346,18 +345,39 @@ def fetch_url_data(url):
                 import random
                 selected_proxy = random.choice(lines)
                 clean_display = selected_proxy.split('@')[-1] if '@' in selected_proxy else selected_proxy
-                print(f"[{datetime.now().strftime('%H:%M:%S')}] Fetching via random proxy from proxies.txt: {clean_display}")
                 proxies = {
                     "http": selected_proxy,
                     "https": selected_proxy
                 }
-                return requests.get(url, headers=HEADERS, proxies=proxies, timeout=15)
+                attempts.append((f'proxies.txt ({clean_display})', lambda: requests.get(url, headers=HEADERS, proxies=proxies, timeout=15)))
         except Exception as e:
             print(f"[{datetime.now().strftime('%H:%M:%S')}] Error reading proxies.txt: {e}")
             
     # 5. Direct connection (default fallback)
-    print(f"[{datetime.now().strftime('%H:%M:%S')}] Fetching via direct connection (no proxy)...")
-    return requests.get(url, headers=HEADERS, timeout=15)
+    attempts.append(('Direct Connection', lambda: requests.get(url, headers=HEADERS, timeout=15)))
+    
+    last_response = None
+    last_error = None
+    
+    for name, fetch_action in attempts:
+        try:
+            print(f"[{datetime.now().strftime('%H:%M:%S')}] Fetching from API via {name}...")
+            res = fetch_action()
+            last_response = res
+            if res.status_code in [200, 202]:
+                print(f"[{datetime.now().strftime('%H:%M:%S')}] Success via {name}!")
+                return res
+            else:
+                print(f"[{datetime.now().strftime('%H:%M:%S')}] {name} returned status {res.status_code}")
+                last_error = f"HTTP {res.status_code}"
+        except Exception as e:
+            print(f"[{datetime.now().strftime('%H:%M:%S')}] {name} failed: {e}")
+            last_error = str(e)
+            
+    if last_response is not None:
+        return last_response
+        
+    raise Exception(f"All fetch attempts failed. Last error: {last_error}")
 
 def check_and_update():
     try:
