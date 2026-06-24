@@ -2278,5 +2278,20 @@
     "most_6s": "Same for both Innings",
     "wickets_lost_ou": "N/A",
     "meeting_code": "KIRON4-2026-06-24-284028-3207"
+  },
+  {
+    "date": "2026-06-24",
+    "time": "17:52:00",
+    "match_name": "Super Over Rajasthan v Hyderabad",
+    "winner": "Rajasthan wins the match",
+    "first_ball_1st_innings": "Wicket",
+    "first_ball_2nd_innings": "No Runs",
+    "total_runs_ou": "(30.5) - Over",
+    "total_4s_ou": "(1.5) - Under",
+    "total_6s_ou": "(2.5) - Over",
+    "most_4s": "1st Innings",
+    "most_6s": "2nd Innings",
+    "wickets_lost_ou": "N/A",
+    "meeting_code": "KIRON4-2026-06-24-284029-3208"
   }
 ]
