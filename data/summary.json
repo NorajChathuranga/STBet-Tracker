@@ -2143,5 +2143,35 @@
     "most_6s": "2nd Innings",
     "wickets_lost_ou": "N/A",
     "meeting_code": "KIRON4-2026-06-24-284019-3198"
+  },
+  {
+    "date": "2026-06-24",
+    "time": "17:16:00",
+    "match_name": "Super Over Delhi v Chennai",
+    "winner": "Delhi wins the match",
+    "first_ball_1st_innings": "Runs",
+    "first_ball_2nd_innings": "Runs",
+    "total_runs_ou": "(30.5) - Over",
+    "total_4s_ou": "(2.5) - Under",
+    "total_6s_ou": "(2.5) - Over",
+    "most_4s": "2nd Innings",
+    "most_6s": "1st Innings",
+    "wickets_lost_ou": "N/A",
+    "meeting_code": "KIRON4-2026-06-24-284020-3199"
+  },
+  {
+    "date": "2026-06-24",
+    "time": "17:20:00",
+    "match_name": "Super Over Hyderabad v Lucknow",
+    "winner": "Hyderabad wins the match",
+    "first_ball_1st_innings": "Runs",
+    "first_ball_2nd_innings": "Wicket",
+    "total_runs_ou": "(30.5) - Over",
+    "total_4s_ou": "(2.5) - Under",
+    "total_6s_ou": "(2.5) - Over",
+    "most_4s": "1st Innings",
+    "most_6s": "2nd Innings",
+    "wickets_lost_ou": "N/A",
+    "meeting_code": "KIRON4-2026-06-24-284021-3200"
   }
 ]
