@@ -1,0 +1,41 @@
+name: STBet Continuous Results Tracker
+
+on:
+  schedule:
+    - cron: '*/5 * * * *'  # Run every 5 minutes
+  workflow_dispatch:      # Enable manual triggering from GitHub UI
+
+jobs:
+  run-tracker:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write     # Allows the action to commit and push changes back
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          persist-credentials: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-python-version: '3.10'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests openpyxl
+
+      - name: Run Tracker
+        run: python tracker.py
+        env:
+          GITHUB_ACTIONS: 'true' # Enforces single-run mode in tracker.py
+
+      - name: Commit and Push Updates
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add data/
+          git diff --quiet && git diff --staged --quiet || (git commit -m "Auto-update match records [skip ci]" && git push)

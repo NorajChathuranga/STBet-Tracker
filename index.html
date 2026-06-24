@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STBet Cricket-SuperOver Live Tracker & Analytics Dashboard</title>
+    <meta name="description" content="Continuously updated analytics, statistics, and results tracker for STBet Cricket Super-Over virtual matches.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar/Header -->
+        <aside class="sidebar">
+            <div class="logo-container">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-trophy"></i>
+                </div>
+                <div>
+                    <h2>STBet Tracker</h2>
+                    <span class="version-tag">Version 3.0</span>
+                </div>
+            </div>
+
+            <nav class="nav-menu">
+                <button class="nav-item active" id="btnDashboard" onclick="switchView('dashboard')">
+                    <i class="fa-solid fa-chart-line"></i> Dashboard
+                </button>
+                <button class="nav-item" id="btnSummary" onclick="switchView('summary')">
+                    <i class="fa-solid fa-list-check"></i> Match Summaries
+                </button>
+                <button class="nav-item" id="btnDetails" onclick="switchView('details')">
+                    <i class="fa-solid fa-circle-info"></i> Detailed Selection Odds
+                </button>
+            </nav>
+
+            <div class="download-section">
+                <h3>Export Data</h3>
+                <a href="data/cricket_superover_results.xlsx" class="download-btn excel-btn" download id="downloadExcel">
+                    <i class="fa-solid fa-file-excel"></i> Download Excel (.xlsx)
+                </a>
+                <a href="data/cricket_superover_summary.csv" class="download-btn csv-btn" download id="downloadSummaryCsv">
+                    <i class="fa-solid fa-file-csv"></i> Summary CSV
+                </a>
+                <a href="data/cricket_superover_details.csv" class="download-btn csv-btn" download id="downloadDetailsCsv">
+                    <i class="fa-solid fa-file-csv"></i> Details CSV
+                </a>
+            </div>
+
+            <div class="status-card">
+                <div class="status-indicator">
+                    <span class="pulse-dot"></span>
+                    <span class="status-text">GitHub Action Active</span>
+                </div>
+                <p>Auto-updated every 5 minutes from the STBet REST API.</p>
+                <div class="last-refreshed">
+                    Refreshed: <span id="lastRefreshedTime">Loading...</span>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Header Bar -->
+            <header class="main-header">
+                <div class="header-title">
+                    <h1>Cricket-SuperOver Analytics</h1>
+                    <p>Real-time outcomes, innings balls, and odds stats</p>
+                </div>
+                <div class="quick-stats-row">
+                    <div class="quick-stat-box">
+                        <span class="qs-label">Total Matches</span>
+                        <span class="qs-value" id="qsTotalMatches">-</span>
+                    </div>
+                    <div class="quick-stat-box">
+                        <span class="qs-label">Avg Runs / Match</span>
+                        <span class="qs-value" id="qsAvgRuns">-</span>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Dashboard View -->
+            <section id="viewDashboard" class="content-view active">
+                <div class="grid-layout">
+                    <!-- Stat Card 1 -->
+                    <div class="card stat-card gradient-1">
+                        <div class="card-body">
+                            <div class="stat-icon-wrapper">
+                                <i class="fa-solid fa-coins"></i>
+                            </div>
+                            <div>
+                                <h3 class="stat-value" id="statWinnerHome">N/A</h3>
+                                <p class="stat-label">Most Common Winner</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Stat Card 2 -->
+                    <div class="card stat-card gradient-2">
+                        <div class="card-body">
+                            <div class="stat-icon-wrapper">
+                                <i class="fa-solid fa-baseball-bat-ball"></i>
+                            </div>
+                            <div>
+                                <h3 class="stat-value" id="stat1stBallOut">N/A</h3>
+                                <p class="stat-label">1st Innings 1st Ball Mode</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Stat Card 3 -->
+                    <div class="card stat-card gradient-3">
+                        <div class="card-body">
+                            <div class="stat-icon-wrapper">
+                                <i class="fa-solid fa-chart-pie"></i>
+                            </div>
+                            <div>
+                                <h3 class="stat-value" id="statRunsOU">N/A</h3>
+                                <p class="stat-label">Total Runs Over/Under Mode</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Charts Section -->
+                <div class="charts-grid">
+                    <div class="card chart-card">
+                        <div class="card-header">
+                            <h3><i class="fa-solid fa-chart-bar"></i> Winner Distribution</h3>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="winnerChart"></canvas>
+                        </div>
+                    </div>
+                    <div class="card chart-card">
+                        <div class="card-header">
+                            <h3><i class="fa-solid fa-chart-donut"></i> 1st Ball Outcomes (Combined Innings)</h3>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="firstBallChart"></canvas>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Matches Card -->
+                <div class="card table-card margin-top">
+                    <div class="card-header flex-between">
+                        <h3><i class="fa-solid fa-clock-rotate-left"></i> Recent Matches</h3>
+                        <button class="text-link-btn" onclick="switchView('summary')">View All Matches</button>
+                    </div>
+                    <div class="table-responsive">
+                        <table class="data-table" id="recentMatchesTable">
+                            <thead>
+                                <tr>
+                                    <th>Date/Time</th>
+                                    <th>Match Name</th>
+                                    <th>Winner</th>
+                                    <th>1st Innings 1st Ball</th>
+                                    <th>2nd Innings 1st Ball</th>
+                                    <th>Runs (O/U)</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td colspan="6" class="text-center text-muted">Loading recent matches...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Summary View -->
+            <section id="viewSummary" class="content-view">
+                <div class="card filter-card">
+                    <div class="filter-grid">
+                        <div class="input-group">
+                            <label for="searchSummary"><i class="fa-solid fa-magnifying-glass"></i> Search</label>
+                            <input type="text" id="searchSummary" placeholder="Search Match, Date, Code..." oninput="filterSummaryTable()">
+                        </div>
+                        <div class="input-group">
+                            <label for="filterWinner"><i class="fa-solid fa-trophy"></i> Winner</label>
+                            <select id="filterWinner" onchange="filterSummaryTable()">
+                                <option value="all">All Winners</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label for="filter1stBall"><i class="fa-solid fa-baseball-bat-ball"></i> 1st Ball (1st Inn)</label>
+                            <select id="filter1stBall" onchange="filterSummaryTable()">
+                                <option value="all">All Outcomes</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card table-card">
+                    <div class="card-header flex-between">
+                        <h3>Match Summary Results</h3>
+                        <span class="count-badge" id="summaryCount">0 matches</span>
+                    </div>
+                    <div class="table-responsive max-height-table">
+                        <table class="data-table" id="summaryTable">
+                            <thead>
+                                <tr>
+                                    <th>Date</th>
+                                    <th>Time</th>
+                                    <th>Match Name</th>
+                                    <th>Winner</th>
+                                    <th class="highlight-yellow-header">1st Innings 1st Ball</th>
+                                    <th class="highlight-yellow-header">2nd Innings 1st Ball</th>
+                                    <th>Runs (O/U)</th>
+                                    <th>4s (O/U)</th>
+                                    <th>6s (O/U)</th>
+                                    <th>Most 4s</th>
+                                    <th>Most 6s</th>
+                                    <th>Wickets Lost</th>
+                                    <th>Code</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td colspan="13" class="text-center text-muted">Loading summary database...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Details View -->
+            <section id="viewDetails" class="content-view">
+                <div class="card filter-card">
+                    <div class="filter-grid">
+                        <div class="input-group">
+                            <label for="searchDetails"><i class="fa-solid fa-magnifying-glass"></i> Search Selections</label>
+                            <input type="text" id="searchDetails" placeholder="Search Selection, Event, Match..." oninput="filterDetailsTable()">
+                        </div>
+                        <div class="input-group">
+                            <label for="filterEventName"><i class="fa-solid fa-tag"></i> Event Type</label>
+                            <select id="filterEventName" onchange="filterDetailsTable()">
+                                <option value="all">All Event Types</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label for="filterResultPos"><i class="fa-solid fa-ranking-star"></i> Result Position</label>
+                            <select id="filterResultPos" onchange="filterDetailsTable()">
+                                <option value="all">All Positions</option>
+                                <option value="1">Winner (Position 1)</option>
+                                <option value="2">Other Position</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card table-card">
+                    <div class="card-header flex-between">
+                        <h3>Detailed Selection Odds & Winning Payoffs</h3>
+                        <span class="count-badge" id="detailsCount">0 records</span>
+                    </div>
+                    <div class="table-responsive max-height-table">
+                        <table class="data-table" id="detailsTable">
+                            <thead>
+                                <tr>
+                                    <th>Date/Time</th>
+                                    <th>Match Name</th>
+                                    <th>Event Name</th>
+                                    <th>Selection Name</th>
+                                    <th>Sel #</th>
+                                    <th>Odds (Last)</th>
+                                    <th>Result Pos</th>
+                                    <th>Win Amount</th>
+                                    <th>Code</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td colspan="9" class="text-center text-muted">Loading selections database...</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
