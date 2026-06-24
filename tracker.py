@@ -321,6 +321,30 @@ def check_and_update():
         print(f"[{datetime.now().strftime('%H:%M:%S')}] Error checking/updating: {e}")
         return False
 
+def git_commit_and_push():
+    """Automatically commit and push changes in data/ folder to GitHub if running locally."""
+    import subprocess
+    try:
+        # Check if git is initialized
+        git_check = subprocess.run(['git', 'rev-parse', '--is-inside-work-tree'], capture_output=True, text=True)
+        if git_check.returncode != 0:
+            return # Not a git repository
+            
+        # Check if there are changes in data/
+        status_check = subprocess.run(['git', 'status', '--porcelain', 'data/'], capture_output=True, text=True)
+        if status_check.stdout.strip():
+            print(f"[{datetime.now().strftime('%H:%M:%S')}] Local changes detected in data/. Committing and pushing to GitHub...")
+            subprocess.run(['git', 'add', 'data/'], check=True, cwd=WORKSPACE_DIR)
+            subprocess.run(['git', 'commit', '-m', 'Auto-update match records (local source)'], check=True, cwd=WORKSPACE_DIR)
+            
+            push_res = subprocess.run(['git', 'push'], capture_output=True, text=True, cwd=WORKSPACE_DIR)
+            if push_res.returncode == 0:
+                print(f"[{datetime.now().strftime('%H:%M:%S')}] Successfully pushed new results to GitHub Pages!")
+            else:
+                print(f"[{datetime.now().strftime('%H:%M:%S')}] Git push failed: {push_res.stderr.strip()}")
+    except Exception as e:
+        print(f"[{datetime.now().strftime('%H:%M:%S')}] Error auto-committing/pushing: {e}")
+
 def main():
     migrate_root_files()
     write_initial_headers()
@@ -340,12 +364,14 @@ def main():
         print("==========================================================")
         
         # Make a check right away on startup
-        check_and_update()
+        if check_and_update():
+            git_commit_and_push()
         
         while True:
             try:
                 time.sleep(240)
-                check_and_update()
+                if check_and_update():
+                    git_commit_and_push()
             except KeyboardInterrupt:
                 print("\nTracker stopped by user.")
                 break
