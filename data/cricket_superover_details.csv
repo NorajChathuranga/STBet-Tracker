@@ -17999,3 +17999,291 @@ date,time,match_name,meeting_code,event_id,event_name,selection_number,selection
 2026-06-29,04:08:00,Super Over Rajasthan v Hyderabad,KIRON4-2026-06-28-285588-3002,151295204,2nd Innings 1st Wicket,1,None,1,7.4,32/5
 2026-06-29,04:08:00,Super Over Rajasthan v Hyderabad,KIRON4-2026-06-28-285588-3002,151295205,1st Innings 1st Ball Outcome,2,Runs,1,1.46,23/50
 2026-06-29,04:08:00,Super Over Rajasthan v Hyderabad,KIRON4-2026-06-28-285588-3002,151295206,2nd Innings 1st Ball Outcome,1,No Runs,1,4.74,187/50
+2026-06-29,04:12:00,Super Over Delhi v Kolkata,KIRON4-2026-06-28-285589-3003,151295306,Match Result,1,Delhi wins the match,1,1.62,31/50
+2026-06-29,04:12:00,Super Over Delhi v Kolkata,KIRON4-2026-06-28-285589-3003,151295307,Total Match Runs Over/Under (30.5),2,Under,1,1.35,7/20
+2026-06-29,04:12:00,Super Over Delhi v Kolkata,KIRON4-2026-06-28-285589-3003,151295308,Total Match 4s Over/Under (2.5),2,Under,1,1.35,7/20
+2026-06-29,04:12:00,Super Over Delhi v Kolkata,KIRON4-2026-06-28-285589-3003,151295309,Total Match 6s Over/Under (2.5),2,Under,1,1.16,4/25
+2026-06-29,04:12:00,Super Over Delhi v Kolkata,KIRON4-2026-06-28-285589-3003,151295310,Innings most 4s,2,Same for both Innings,1,2.27,127/100
+2026-06-29,04:12:00,Super Over Delhi v Kolkata,KIRON4-2026-06-28-285589-3003,151295311,Innings most 6s,2,Same for both Innings,1,1.85,17/20
+2026-06-29,04:12:00,Super Over Delhi v Kolkata,KIRON4-2026-06-28-285589-3003,151295312,Total Match Boundaries,2,2-3,1,1.82,41/50
+2026-06-29,04:12:00,Super Over Delhi v Kolkata,KIRON4-2026-06-28-285589-3003,151295313,Run-Out in the Match,2,No,1,1.63,63/100
+2026-06-29,04:12:00,Super Over Delhi v Kolkata,KIRON4-2026-06-28-285589-3003,151295314,Total Match Wickets Over/Under (2.5),2,Under,1,1.55,11/20
+2026-06-29,04:12:00,Super Over Delhi v Kolkata,KIRON4-2026-06-28-285589-3003,151295315,1st Innings Runs Over/Under (15.5),2,Under,1,1.34,17/50
+2026-06-29,04:12:00,Super Over Delhi v Kolkata,KIRON4-2026-06-28-285589-3003,151295316,1st Innings 4s Over/Under (0.5),2,Under,1,4.11,311/100
+2026-06-29,04:12:00,Super Over Delhi v Kolkata,KIRON4-2026-06-28-285589-3003,151295317,1st Innings 6s Over/Under (1.5),2,Under,1,1.12,3/25
+2026-06-29,04:12:00,Super Over Delhi v Kolkata,KIRON4-2026-06-28-285589-3003,151295318,1st Innings 1st Wicket,3,Caught,1,3.91,291/100
+2026-06-29,04:12:00,Super Over Delhi v Kolkata,KIRON4-2026-06-28-285589-3003,151295319,2nd Innings 1st Wicket,1,None,1,6.1,51/10
+2026-06-29,04:12:00,Super Over Delhi v Kolkata,KIRON4-2026-06-28-285589-3003,151295320,1st Innings 1st Ball Outcome,2,Runs,1,1.54,27/50
+2026-06-29,04:12:00,Super Over Delhi v Kolkata,KIRON4-2026-06-28-285589-3003,151295321,2nd Innings 1st Ball Outcome,1,No Runs,1,4.96,99/25
+2026-06-29,04:16:00,Super Over Bangalore v Chennai,KIRON4-2026-06-28-285590-3004,151295382,Match Result,1,Bangalore wins the match,1,1.95,19/20
+2026-06-29,04:16:00,Super Over Bangalore v Chennai,KIRON4-2026-06-28-285590-3004,151295383,Total Match Runs Over/Under (30.5),1,Over,1,2.56,39/25
+2026-06-29,04:16:00,Super Over Bangalore v Chennai,KIRON4-2026-06-28-285590-3004,151295384,Total Match 4s Over/Under (2.5),1,Over,1,2.6,8/5
+2026-06-29,04:16:00,Super Over Bangalore v Chennai,KIRON4-2026-06-28-285590-3004,151295385,Total Match 6s Over/Under (2.5),1,Over,1,3.81,281/100
+2026-06-29,04:16:00,Super Over Bangalore v Chennai,KIRON4-2026-06-28-285590-3004,151295386,Innings most 4s,3,2nd Innings,1,2.95,39/20
+2026-06-29,04:16:00,Super Over Bangalore v Chennai,KIRON4-2026-06-28-285590-3004,151295387,Innings most 6s,1,1st Innings,1,3.25,9/4
+2026-06-29,04:16:00,Super Over Bangalore v Chennai,KIRON4-2026-06-28-285590-3004,151295388,Total Match Boundaries,4,6+,1,4.7,37/10
+2026-06-29,04:16:00,Super Over Bangalore v Chennai,KIRON4-2026-06-28-285590-3004,151295389,Run-Out in the Match,1,Yes,1,1.87,87/100
+2026-06-29,04:16:00,Super Over Bangalore v Chennai,KIRON4-2026-06-28-285590-3004,151295390,Total Match Wickets Over/Under (2.5),1,Over,1,1.93,93/100
+2026-06-29,04:16:00,Super Over Bangalore v Chennai,KIRON4-2026-06-28-285590-3004,151295391,1st Innings Runs Over/Under (15.5),1,Over,1,2.56,39/25
+2026-06-29,04:16:00,Super Over Bangalore v Chennai,KIRON4-2026-06-28-285590-3004,151295392,1st Innings 4s Over/Under (0.5),1,Over,1,1.12,3/25
+2026-06-29,04:16:00,Super Over Bangalore v Chennai,KIRON4-2026-06-28-285590-3004,151295393,1st Innings 6s Over/Under (1.5),1,Over,1,4.22,161/50
+2026-06-29,04:16:00,Super Over Bangalore v Chennai,KIRON4-2026-06-28-285590-3004,151295394,1st Innings 1st Wicket,4,Other,1,2.03,103/100
+2026-06-29,04:16:00,Super Over Bangalore v Chennai,KIRON4-2026-06-28-285590-3004,151295395,2nd Innings 1st Wicket,2,Bowled,1,4.29,329/100
+2026-06-29,04:16:00,Super Over Bangalore v Chennai,KIRON4-2026-06-28-285590-3004,151295396,1st Innings 1st Ball Outcome,2,Runs,1,1.54,27/50
+2026-06-29,04:16:00,Super Over Bangalore v Chennai,KIRON4-2026-06-28-285590-3004,151295397,2nd Innings 1st Ball Outcome,2,Runs,1,1.65,13/20
+2026-06-29,04:20:00,Super Over Mumbai v Punjab,KIRON4-2026-06-28-285591-3005,151296393,Match Result,2,Punjab wins the match,1,2.63,163/100
+2026-06-29,04:20:00,Super Over Mumbai v Punjab,KIRON4-2026-06-28-285591-3005,151296394,Total Match Runs Over/Under (30.5),2,Under,1,1.38,19/50
+2026-06-29,04:20:00,Super Over Mumbai v Punjab,KIRON4-2026-06-28-285591-3005,151296395,Total Match 4s Over/Under (2.5),2,Under,1,1.32,8/25
+2026-06-29,04:20:00,Super Over Mumbai v Punjab,KIRON4-2026-06-28-285591-3005,151296396,Total Match 6s Over/Under (2.5),2,Under,1,1.17,17/100
+2026-06-29,04:20:00,Super Over Mumbai v Punjab,KIRON4-2026-06-28-285591-3005,151296397,Innings most 4s,3,2nd Innings,1,3.06,103/50
+2026-06-29,04:20:00,Super Over Mumbai v Punjab,KIRON4-2026-06-28-285591-3005,151296398,Innings most 6s,2,Same for both Innings,1,1.93,93/100
+2026-06-29,04:20:00,Super Over Mumbai v Punjab,KIRON4-2026-06-28-285591-3005,151296399,Total Match Boundaries,1,0-1,1,15.0,14/1
+2026-06-29,04:20:00,Super Over Mumbai v Punjab,KIRON4-2026-06-28-285591-3005,151296400,Run-Out in the Match,1,Yes,1,1.91,91/100
+2026-06-29,04:20:00,Super Over Mumbai v Punjab,KIRON4-2026-06-28-285591-3005,151296401,Total Match Wickets Over/Under (2.5),1,Over,1,2.08,27/25
+2026-06-29,04:20:00,Super Over Mumbai v Punjab,KIRON4-2026-06-28-285591-3005,151296402,1st Innings Runs Over/Under (15.5),2,Under,1,1.31,31/100
+2026-06-29,04:20:00,Super Over Mumbai v Punjab,KIRON4-2026-06-28-285591-3005,151296403,1st Innings 4s Over/Under (0.5),2,Under,1,4.26,163/50
+2026-06-29,04:20:00,Super Over Mumbai v Punjab,KIRON4-2026-06-28-285591-3005,151296404,1st Innings 6s Over/Under (1.5),2,Under,1,1.1,1/10
+2026-06-29,04:20:00,Super Over Mumbai v Punjab,KIRON4-2026-06-28-285591-3005,151296405,1st Innings 1st Wicket,4,Other,1,2.15,23/20
+2026-06-29,04:20:00,Super Over Mumbai v Punjab,KIRON4-2026-06-28-285591-3005,151296406,2nd Innings 1st Wicket,4,Other,1,2.09,109/100
+2026-06-29,04:20:00,Super Over Mumbai v Punjab,KIRON4-2026-06-28-285591-3005,151296407,1st Innings 1st Ball Outcome,3,Wicket,1,6.0,5/1
+2026-06-29,04:20:00,Super Over Mumbai v Punjab,KIRON4-2026-06-28-285591-3005,151296408,2nd Innings 1st Ball Outcome,2,Runs,1,1.63,63/100
+2026-06-29,04:24:00,Super Over Rajasthan v Hyderabad,KIRON4-2026-06-28-285592-3006,151296573,Match Result,1,Rajasthan wins the match,1,1.33,33/100
+2026-06-29,04:24:00,Super Over Rajasthan v Hyderabad,KIRON4-2026-06-28-285592-3006,151296574,Total Match Runs Over/Under (30.5),1,Over,1,2.33,133/100
+2026-06-29,04:24:00,Super Over Rajasthan v Hyderabad,KIRON4-2026-06-28-285592-3006,151296575,Total Match 4s Over/Under (1.5),1,Over,1,1.36,9/25
+2026-06-29,04:24:00,Super Over Rajasthan v Hyderabad,KIRON4-2026-06-28-285592-3006,151296576,Total Match 6s Over/Under (2.5),1,Over,1,3.41,241/100
+2026-06-29,04:24:00,Super Over Rajasthan v Hyderabad,KIRON4-2026-06-28-285592-3006,151296577,Innings most 4s,3,2nd Innings,1,2.74,87/50
+2026-06-29,04:24:00,Super Over Rajasthan v Hyderabad,KIRON4-2026-06-28-285592-3006,151296578,Innings most 6s,1,1st Innings,1,3.68,67/25
+2026-06-29,04:24:00,Super Over Rajasthan v Hyderabad,KIRON4-2026-06-28-285592-3006,151296579,Total Match Boundaries,4,6+,1,4.31,331/100
+2026-06-29,04:24:00,Super Over Rajasthan v Hyderabad,KIRON4-2026-06-28-285592-3006,151296580,Run-Out in the Match,2,No,1,1.68,17/25
+2026-06-29,04:24:00,Super Over Rajasthan v Hyderabad,KIRON4-2026-06-28-285592-3006,151296581,Total Match Wickets Over/Under (2.5),2,Under,1,1.57,57/100
+2026-06-29,04:24:00,Super Over Rajasthan v Hyderabad,KIRON4-2026-06-28-285592-3006,151296582,1st Innings Runs Over/Under (15.5),1,Over,1,2.58,79/50
+2026-06-29,04:24:00,Super Over Rajasthan v Hyderabad,KIRON4-2026-06-28-285592-3006,151296583,1st Innings 4s Over/Under (1.5),2,Under,1,1.17,17/100
+2026-06-29,04:24:00,Super Over Rajasthan v Hyderabad,KIRON4-2026-06-28-285592-3006,151296584,1st Innings 6s Over/Under (1.5),1,Over,1,4.26,163/50
+2026-06-29,04:24:00,Super Over Rajasthan v Hyderabad,KIRON4-2026-06-28-285592-3006,151296585,1st Innings 1st Wicket,3,Caught,1,3.99,299/100
+2026-06-29,04:24:00,Super Over Rajasthan v Hyderabad,KIRON4-2026-06-28-285592-3006,151296586,2nd Innings 1st Wicket,3,Caught,1,4.1,31/10
+2026-06-29,04:24:00,Super Over Rajasthan v Hyderabad,KIRON4-2026-06-28-285592-3006,151296587,1st Innings 1st Ball Outcome,5,No-Ball,1,15.0,14/1
+2026-06-29,04:24:00,Super Over Rajasthan v Hyderabad,KIRON4-2026-06-28-285592-3006,151296588,2nd Innings 1st Ball Outcome,2,Runs,1,1.6,3/5
+2026-06-29,04:28:00,Super Over Kolkata v Gujarat,KIRON4-2026-06-28-285593-3007,151296757,Match Result,1,Kolkata wins the match,1,1.77,77/100
+2026-06-29,04:28:00,Super Over Kolkata v Gujarat,KIRON4-2026-06-28-285593-3007,151296758,Total Match Runs Over/Under (30.5),1,Over,1,2.34,67/50
+2026-06-29,04:28:00,Super Over Kolkata v Gujarat,KIRON4-2026-06-28-285593-3007,151296759,Total Match 4s Over/Under (2.5),2,Under,1,1.35,7/20
+2026-06-29,04:28:00,Super Over Kolkata v Gujarat,KIRON4-2026-06-28-285593-3007,151296760,Total Match 6s Over/Under (2.5),1,Over,1,3.22,111/50
+2026-06-29,04:28:00,Super Over Kolkata v Gujarat,KIRON4-2026-06-28-285593-3007,151296761,Innings most 4s,2,Same for both Innings,1,2.29,129/100
+2026-06-29,04:28:00,Super Over Kolkata v Gujarat,KIRON4-2026-06-28-285593-3007,151296762,Innings most 6s,1,1st Innings,1,2.96,49/25
+2026-06-29,04:28:00,Super Over Kolkata v Gujarat,KIRON4-2026-06-28-285593-3007,151296763,Total Match Boundaries,3,4-5,1,3.02,101/50
+2026-06-29,04:28:00,Super Over Kolkata v Gujarat,KIRON4-2026-06-28-285593-3007,151296764,Run-Out in the Match,2,No,1,1.72,18/25
+2026-06-29,04:28:00,Super Over Kolkata v Gujarat,KIRON4-2026-06-28-285593-3007,151296765,Total Match Wickets Over/Under (2.5),2,Under,1,1.6,3/5
+2026-06-29,04:28:00,Super Over Kolkata v Gujarat,KIRON4-2026-06-28-285593-3007,151296766,1st Innings Runs Over/Under (10.5),1,Over,1,1.34,17/50
+2026-06-29,04:28:00,Super Over Kolkata v Gujarat,KIRON4-2026-06-28-285593-3007,151296767,1st Innings 4s Over/Under (0.5),2,Under,1,3.86,143/50
+2026-06-29,04:28:00,Super Over Kolkata v Gujarat,KIRON4-2026-06-28-285593-3007,151296768,1st Innings 6s Over/Under (1.5),1,Over,1,3.57,257/100
+2026-06-29,04:28:00,Super Over Kolkata v Gujarat,KIRON4-2026-06-28-285593-3007,151296769,1st Innings 1st Wicket,2,Bowled,1,3.96,74/25
+2026-06-29,04:28:00,Super Over Kolkata v Gujarat,KIRON4-2026-06-28-285593-3007,151296770,2nd Innings 1st Wicket,2,Bowled,1,4.27,327/100
+2026-06-29,04:28:00,Super Over Kolkata v Gujarat,KIRON4-2026-06-28-285593-3007,151296771,1st Innings 1st Ball Outcome,2,Runs,1,1.43,43/100
+2026-06-29,04:28:00,Super Over Kolkata v Gujarat,KIRON4-2026-06-28-285593-3007,151296772,2nd Innings 1st Ball Outcome,1,No Runs,1,4.89,389/100
+2026-06-29,04:32:00,Super Over Lucknow v Chennai,KIRON4-2026-06-29-285594-3008,151296886,Match Result,2,Chennai wins the match,1,1.61,61/100
+2026-06-29,04:32:00,Super Over Lucknow v Chennai,KIRON4-2026-06-29-285594-3008,151296887,Total Match Runs Over/Under (30.5),2,Under,1,1.41,41/100
+2026-06-29,04:32:00,Super Over Lucknow v Chennai,KIRON4-2026-06-29-285594-3008,151296888,Total Match 4s Over/Under (2.5),2,Under,1,1.38,19/50
+2026-06-29,04:32:00,Super Over Lucknow v Chennai,KIRON4-2026-06-29-285594-3008,151296889,Total Match 6s Over/Under (2.5),2,Under,1,1.18,9/50
+2026-06-29,04:32:00,Super Over Lucknow v Chennai,KIRON4-2026-06-29-285594-3008,151296890,Innings most 4s,2,Same for both Innings,1,2.31,131/100
+2026-06-29,04:32:00,Super Over Lucknow v Chennai,KIRON4-2026-06-29-285594-3008,151296891,Innings most 6s,2,Same for both Innings,1,1.92,23/25
+2026-06-29,04:32:00,Super Over Lucknow v Chennai,KIRON4-2026-06-29-285594-3008,151296892,Total Match Boundaries,2,2-3,1,1.86,43/50
+2026-06-29,04:32:00,Super Over Lucknow v Chennai,KIRON4-2026-06-29-285594-3008,151296893,Run-Out in the Match,1,Yes,1,1.9,9/10
+2026-06-29,04:32:00,Super Over Lucknow v Chennai,KIRON4-2026-06-29-285594-3008,151296894,Total Match Wickets Over/Under (2.5),2,Under,1,1.59,59/100
+2026-06-29,04:32:00,Super Over Lucknow v Chennai,KIRON4-2026-06-29-285594-3008,151296895,1st Innings Runs Over/Under (10.5),2,Under,1,2.52,38/25
+2026-06-29,04:32:00,Super Over Lucknow v Chennai,KIRON4-2026-06-29-285594-3008,151296896,1st Innings 4s Over/Under (0.5),1,Over,1,1.12,3/25
+2026-06-29,04:32:00,Super Over Lucknow v Chennai,KIRON4-2026-06-29-285594-3008,151296897,1st Innings 6s Over/Under (1.5),2,Under,1,1.15,3/20
+2026-06-29,04:32:00,Super Over Lucknow v Chennai,KIRON4-2026-06-29-285594-3008,151296898,1st Innings 1st Wicket,4,Other,1,2.06,53/50
+2026-06-29,04:32:00,Super Over Lucknow v Chennai,KIRON4-2026-06-29-285594-3008,151296899,2nd Innings 1st Wicket,4,Other,1,2.1,11/10
+2026-06-29,04:32:00,Super Over Lucknow v Chennai,KIRON4-2026-06-29-285594-3008,151296900,1st Innings 1st Ball Outcome,4,Wide,1,73.0,72/1
+2026-06-29,04:32:00,Super Over Lucknow v Chennai,KIRON4-2026-06-29-285594-3008,151296901,2nd Innings 1st Ball Outcome,1,No Runs,1,5.05,81/20
+2026-06-29,04:36:00,Super Over Delhi v Bangalore,KIRON4-2026-06-29-285595-3009,151297024,Match Result,1,Delhi wins the match,1,1.81,81/100
+2026-06-29,04:36:00,Super Over Delhi v Bangalore,KIRON4-2026-06-29-285595-3009,151297025,Total Match Runs Over/Under (30.5),2,Under,1,1.42,21/50
+2026-06-29,04:36:00,Super Over Delhi v Bangalore,KIRON4-2026-06-29-285595-3009,151297026,Total Match 4s Over/Under (2.5),2,Under,1,1.34,17/50
+2026-06-29,04:36:00,Super Over Delhi v Bangalore,KIRON4-2026-06-29-285595-3009,151297027,Total Match 6s Over/Under (2.5),2,Under,1,1.21,21/100
+2026-06-29,04:36:00,Super Over Delhi v Bangalore,KIRON4-2026-06-29-285595-3009,151297028,Innings most 4s,1,1st Innings,1,2.67,167/100
+2026-06-29,04:36:00,Super Over Delhi v Bangalore,KIRON4-2026-06-29-285595-3009,151297029,Innings most 6s,3,2nd Innings,1,3.61,261/100
+2026-06-29,04:36:00,Super Over Delhi v Bangalore,KIRON4-2026-06-29-285595-3009,151297031,Total Match Boundaries,2,2-3,1,1.93,93/100
+2026-06-29,04:36:00,Super Over Delhi v Bangalore,KIRON4-2026-06-29-285595-3009,151297032,Run-Out in the Match,2,No,1,1.68,17/25
+2026-06-29,04:36:00,Super Over Delhi v Bangalore,KIRON4-2026-06-29-285595-3009,151297033,Total Match Wickets Over/Under (2.5),1,Over,1,1.93,93/100
+2026-06-29,04:36:00,Super Over Delhi v Bangalore,KIRON4-2026-06-29-285595-3009,151297034,1st Innings Runs Over/Under (10.5),2,Under,1,2.58,79/50
+2026-06-29,04:36:00,Super Over Delhi v Bangalore,KIRON4-2026-06-29-285595-3009,151297035,1st Innings 4s Over/Under (0.5),1,Over,1,1.15,3/20
+2026-06-29,04:36:00,Super Over Delhi v Bangalore,KIRON4-2026-06-29-285595-3009,151297036,1st Innings 6s Over/Under (1.5),2,Under,1,1.16,4/25
+2026-06-29,04:36:00,Super Over Delhi v Bangalore,KIRON4-2026-06-29-285595-3009,151297037,1st Innings 1st Wicket,4,Other,1,2.09,109/100
+2026-06-29,04:36:00,Super Over Delhi v Bangalore,KIRON4-2026-06-29-285595-3009,151297038,2nd Innings 1st Wicket,3,Caught,1,4.34,167/50
+2026-06-29,04:36:00,Super Over Delhi v Bangalore,KIRON4-2026-06-29-285595-3009,151297039,1st Innings 1st Ball Outcome,2,Runs,1,1.49,49/100
+2026-06-29,04:36:00,Super Over Delhi v Bangalore,KIRON4-2026-06-29-285595-3009,151297040,2nd Innings 1st Ball Outcome,2,Runs,1,1.66,33/50
+2026-06-29,04:40:00,Super Over Rajasthan v Mumbai,KIRON4-2026-06-29-285596-3010,151297124,Match Result,2,Mumbai wins the match,1,1.46,23/50
+2026-06-29,04:40:00,Super Over Rajasthan v Mumbai,KIRON4-2026-06-29-285596-3010,151297125,Total Match Runs Over/Under (30.5),2,Under,1,1.39,39/100
+2026-06-29,04:40:00,Super Over Rajasthan v Mumbai,KIRON4-2026-06-29-285596-3010,151297126,Total Match 4s Over/Under (2.5),2,Under,1,1.38,19/50
+2026-06-29,04:40:00,Super Over Rajasthan v Mumbai,KIRON4-2026-06-29-285596-3010,151297127,Total Match 6s Over/Under (2.5),2,Under,1,1.18,9/50
+2026-06-29,04:40:00,Super Over Rajasthan v Mumbai,KIRON4-2026-06-29-285596-3010,151297128,Innings most 4s,3,2nd Innings,1,3.0,2/1
+2026-06-29,04:40:00,Super Over Rajasthan v Mumbai,KIRON4-2026-06-29-285596-3010,151297129,Innings most 6s,1,1st Innings,1,2.64,41/25
+2026-06-29,04:40:00,Super Over Rajasthan v Mumbai,KIRON4-2026-06-29-285596-3010,151297130,Total Match Boundaries,2,2-3,1,1.93,93/100
+2026-06-29,04:40:00,Super Over Rajasthan v Mumbai,KIRON4-2026-06-29-285596-3010,151297131,Run-Out in the Match,1,Yes,1,1.85,17/20
+2026-06-29,04:40:00,Super Over Rajasthan v Mumbai,KIRON4-2026-06-29-285596-3010,151297132,Total Match Wickets Over/Under (2.5),1,Over,1,1.91,91/100
+2026-06-29,04:40:00,Super Over Rajasthan v Mumbai,KIRON4-2026-06-29-285596-3010,151297133,1st Innings Runs Over/Under (10.5),2,Under,1,2.63,163/100
+2026-06-29,04:40:00,Super Over Rajasthan v Mumbai,KIRON4-2026-06-29-285596-3010,151297134,1st Innings 4s Over/Under (0.5),2,Under,1,4.21,321/100
+2026-06-29,04:40:00,Super Over Rajasthan v Mumbai,KIRON4-2026-06-29-285596-3010,151297135,1st Innings 6s Over/Under (1.5),2,Under,1,1.18,9/50
+2026-06-29,04:40:00,Super Over Rajasthan v Mumbai,KIRON4-2026-06-29-285596-3010,151297136,1st Innings 1st Wicket,2,Bowled,1,4.36,84/25
+2026-06-29,04:40:00,Super Over Rajasthan v Mumbai,KIRON4-2026-06-29-285596-3010,151297137,2nd Innings 1st Wicket,3,Caught,1,4.22,161/50
+2026-06-29,04:40:00,Super Over Rajasthan v Mumbai,KIRON4-2026-06-29-285596-3010,151297138,1st Innings 1st Ball Outcome,1,No Runs,1,6.1,51/10
+2026-06-29,04:40:00,Super Over Rajasthan v Mumbai,KIRON4-2026-06-29-285596-3010,151297139,2nd Innings 1st Ball Outcome,3,Wicket,1,5.25,17/4
+2026-06-29,04:44:00,Super Over Hyderabad v Punjab,KIRON4-2026-06-29-285597-3011,151297234,Match Result,2,Punjab wins the match,1,1.51,51/100
+2026-06-29,04:44:00,Super Over Hyderabad v Punjab,KIRON4-2026-06-29-285597-3011,151297235,Total Match Runs Over/Under (30.5),1,Over,1,2.3,13/10
+2026-06-29,04:44:00,Super Over Hyderabad v Punjab,KIRON4-2026-06-29-285597-3011,151297236,Total Match 4s Over/Under (1.5),1,Over,1,1.36,9/25
+2026-06-29,04:44:00,Super Over Hyderabad v Punjab,KIRON4-2026-06-29-285597-3011,151297237,Total Match 6s Over/Under (2.5),2,Under,1,1.2,1/5
+2026-06-29,04:44:00,Super Over Hyderabad v Punjab,KIRON4-2026-06-29-285597-3011,151297238,Innings most 4s,3,2nd Innings,1,3.09,209/100
+2026-06-29,04:44:00,Super Over Hyderabad v Punjab,KIRON4-2026-06-29-285597-3011,151297239,Innings most 6s,1,1st Innings,1,2.72,43/25
+2026-06-29,04:44:00,Super Over Hyderabad v Punjab,KIRON4-2026-06-29-285597-3011,151297240,Total Match Boundaries,4,6+,1,4.14,157/50
+2026-06-29,04:44:00,Super Over Hyderabad v Punjab,KIRON4-2026-06-29-285597-3011,151297241,Run-Out in the Match,2,No,1,1.67,67/100
+2026-06-29,04:44:00,Super Over Hyderabad v Punjab,KIRON4-2026-06-29-285597-3011,151297242,Total Match Wickets Over/Under (2.5),1,Over,1,1.89,89/100
+2026-06-29,04:44:00,Super Over Hyderabad v Punjab,KIRON4-2026-06-29-285597-3011,151297243,1st Innings Runs Over/Under (10.5),1,Over,1,1.31,31/100
+2026-06-29,04:44:00,Super Over Hyderabad v Punjab,KIRON4-2026-06-29-285597-3011,151297244,1st Innings 4s Over/Under (0.5),1,Over,1,1.17,17/100
+2026-06-29,04:44:00,Super Over Hyderabad v Punjab,KIRON4-2026-06-29-285597-3011,151297245,1st Innings 6s Over/Under (1.5),1,Over,1,3.41,241/100
+2026-06-29,04:44:00,Super Over Hyderabad v Punjab,KIRON4-2026-06-29-285597-3011,151297246,1st Innings 1st Wicket,4,Other,1,2.07,107/100
+2026-06-29,04:44:00,Super Over Hyderabad v Punjab,KIRON4-2026-06-29-285597-3011,151297247,2nd Innings 1st Wicket,4,Other,1,2.05,21/20
+2026-06-29,04:44:00,Super Over Hyderabad v Punjab,KIRON4-2026-06-29-285597-3011,151297248,1st Innings 1st Ball Outcome,2,Runs,1,1.46,23/50
+2026-06-29,04:44:00,Super Over Hyderabad v Punjab,KIRON4-2026-06-29-285597-3011,151297249,2nd Innings 1st Ball Outcome,3,Wicket,1,5.69,469/100
+2026-06-29,04:48:00,Super Over Kolkata v Lucknow,KIRON4-2026-06-29-285598-3012,151297333,Match Result,2,Lucknow wins the match,1,1.67,67/100
+2026-06-29,04:48:00,Super Over Kolkata v Lucknow,KIRON4-2026-06-29-285598-3012,151297334,Total Match Runs Over/Under (30.5),2,Under,1,1.39,39/100
+2026-06-29,04:48:00,Super Over Kolkata v Lucknow,KIRON4-2026-06-29-285598-3012,151297335,Total Match 4s Over/Under (2.5),2,Under,1,1.35,7/20
+2026-06-29,04:48:00,Super Over Kolkata v Lucknow,KIRON4-2026-06-29-285598-3012,151297336,Total Match 6s Over/Under (2.5),2,Under,1,1.2,1/5
+2026-06-29,04:48:00,Super Over Kolkata v Lucknow,KIRON4-2026-06-29-285598-3012,151297337,Innings most 4s,2,Same for both Innings,1,2.28,32/25
+2026-06-29,04:48:00,Super Over Kolkata v Lucknow,KIRON4-2026-06-29-285598-3012,151297338,Innings most 6s,3,2nd Innings,1,3.34,117/50
+2026-06-29,04:48:00,Super Over Kolkata v Lucknow,KIRON4-2026-06-29-285598-3012,151297339,Total Match Boundaries,2,2-3,1,1.83,83/100
+2026-06-29,04:48:00,Super Over Kolkata v Lucknow,KIRON4-2026-06-29-285598-3012,151297340,Run-Out in the Match,1,Yes,1,1.94,47/50
+2026-06-29,04:48:00,Super Over Kolkata v Lucknow,KIRON4-2026-06-29-285598-3012,151297341,Total Match Wickets Over/Under (2.5),1,Over,1,2.01,101/100
+2026-06-29,04:48:00,Super Over Kolkata v Lucknow,KIRON4-2026-06-29-285598-3012,151297342,1st Innings Runs Over/Under (10.5),2,Under,1,2.48,37/25
+2026-06-29,04:48:00,Super Over Kolkata v Lucknow,KIRON4-2026-06-29-285598-3012,151297343,1st Innings 4s Over/Under (0.5),1,Over,1,1.13,13/100
+2026-06-29,04:48:00,Super Over Kolkata v Lucknow,KIRON4-2026-06-29-285598-3012,151297344,1st Innings 6s Over/Under (1.5),2,Under,1,1.15,3/20
+2026-06-29,04:48:00,Super Over Kolkata v Lucknow,KIRON4-2026-06-29-285598-3012,151297345,1st Innings 1st Wicket,4,Other,1,2.1,11/10
+2026-06-29,04:48:00,Super Over Kolkata v Lucknow,KIRON4-2026-06-29-285598-3012,151297346,2nd Innings 1st Wicket,4,Other,1,2.07,107/100
+2026-06-29,04:48:00,Super Over Kolkata v Lucknow,KIRON4-2026-06-29-285598-3012,151297347,1st Innings 1st Ball Outcome,3,Wicket,1,5.49,449/100
+2026-06-29,04:48:00,Super Over Kolkata v Lucknow,KIRON4-2026-06-29-285598-3012,151297348,2nd Innings 1st Ball Outcome,3,Wicket,1,5.21,421/100
+2026-06-29,04:52:00,Super Over Gujarat v Bangalore,KIRON4-2026-06-29-285599-3013,151297536,Match Result,1,Gujarat wins the match,1,1.86,43/50
+2026-06-29,04:52:00,Super Over Gujarat v Bangalore,KIRON4-2026-06-29-285599-3013,151297537,Total Match Runs Over/Under (30.5),1,Over,1,2.35,27/20
+2026-06-29,04:52:00,Super Over Gujarat v Bangalore,KIRON4-2026-06-29-285599-3013,151297538,Total Match 4s Over/Under (2.5),2,Under,1,1.34,17/50
+2026-06-29,04:52:00,Super Over Gujarat v Bangalore,KIRON4-2026-06-29-285599-3013,151297539,Total Match 6s Over/Under (2.5),1,Over,1,3.35,47/20
+2026-06-29,04:52:00,Super Over Gujarat v Bangalore,KIRON4-2026-06-29-285599-3013,151297540,Innings most 4s,3,2nd Innings,1,2.97,197/100
+2026-06-29,04:52:00,Super Over Gujarat v Bangalore,KIRON4-2026-06-29-285599-3013,151297541,Innings most 6s,1,1st Innings,1,3.09,209/100
+2026-06-29,04:52:00,Super Over Gujarat v Bangalore,KIRON4-2026-06-29-285599-3013,151297542,Total Match Boundaries,3,4-5,1,3.13,213/100
+2026-06-29,04:52:00,Super Over Gujarat v Bangalore,KIRON4-2026-06-29-285599-3013,151297543,Run-Out in the Match,2,No,1,1.57,57/100
+2026-06-29,04:52:00,Super Over Gujarat v Bangalore,KIRON4-2026-06-29-285599-3013,151297544,Total Match Wickets Over/Under (2.5),2,Under,1,1.57,57/100
+2026-06-29,04:52:00,Super Over Gujarat v Bangalore,KIRON4-2026-06-29-285599-3013,151297545,1st Innings Runs Over/Under (10.5),1,Over,1,1.36,9/25
+2026-06-29,04:52:00,Super Over Gujarat v Bangalore,KIRON4-2026-06-29-285599-3013,151297546,1st Innings 4s Over/Under (0.5),2,Under,1,4.02,151/50
+2026-06-29,04:52:00,Super Over Gujarat v Bangalore,KIRON4-2026-06-29-285599-3013,151297547,1st Innings 6s Over/Under (1.5),1,Over,1,3.77,277/100
+2026-06-29,04:52:00,Super Over Gujarat v Bangalore,KIRON4-2026-06-29-285599-3013,151297548,1st Innings 1st Wicket,4,Other,1,2.1,11/10
+2026-06-29,04:52:00,Super Over Gujarat v Bangalore,KIRON4-2026-06-29-285599-3013,151297549,2nd Innings 1st Wicket,1,None,1,6.4,27/5
+2026-06-29,04:52:00,Super Over Gujarat v Bangalore,KIRON4-2026-06-29-285599-3013,151297550,1st Innings 1st Ball Outcome,3,Wicket,1,5.49,449/100
+2026-06-29,04:52:00,Super Over Gujarat v Bangalore,KIRON4-2026-06-29-285599-3013,151297551,2nd Innings 1st Ball Outcome,2,Runs,1,1.64,16/25
+2026-06-29,04:56:00,Super Over Rajasthan v Delhi,KIRON4-2026-06-29-285600-3014,151297661,Match Result,2,Delhi wins the match,1,1.62,31/50
+2026-06-29,04:56:00,Super Over Rajasthan v Delhi,KIRON4-2026-06-29-285600-3014,151297662,Total Match Runs Over/Under (20.5),1,Over,1,1.37,37/100
+2026-06-29,04:56:00,Super Over Rajasthan v Delhi,KIRON4-2026-06-29-285600-3014,151297663,Total Match 4s Over/Under (2.5),2,Under,1,1.31,31/100
+2026-06-29,04:56:00,Super Over Rajasthan v Delhi,KIRON4-2026-06-29-285600-3014,151297664,Total Match 6s Over/Under (2.5),2,Under,1,1.13,13/100
+2026-06-29,04:56:00,Super Over Rajasthan v Delhi,KIRON4-2026-06-29-285600-3014,151297665,Innings most 4s,2,Same for both Innings,1,2.23,123/100
+2026-06-29,04:56:00,Super Over Rajasthan v Delhi,KIRON4-2026-06-29-285600-3014,151297666,Innings most 6s,2,Same for both Innings,1,1.82,41/50
+2026-06-29,04:56:00,Super Over Rajasthan v Delhi,KIRON4-2026-06-29-285600-3014,151297667,Total Match Boundaries,2,2-3,1,1.73,73/100
+2026-06-29,04:56:00,Super Over Rajasthan v Delhi,KIRON4-2026-06-29-285600-3014,151297668,Run-Out in the Match,2,No,1,1.65,13/20
+2026-06-29,04:56:00,Super Over Rajasthan v Delhi,KIRON4-2026-06-29-285600-3014,151297669,Total Match Wickets Over/Under (2.5),2,Under,1,1.63,63/100
+2026-06-29,04:56:00,Super Over Rajasthan v Delhi,KIRON4-2026-06-29-285600-3014,151297670,1st Innings Runs Over/Under (15.5),2,Under,1,1.29,29/100
+2026-06-29,04:56:00,Super Over Rajasthan v Delhi,KIRON4-2026-06-29-285600-3014,151297671,1st Innings 4s Over/Under (0.5),1,Over,1,1.14,7/50
+2026-06-29,04:56:00,Super Over Rajasthan v Delhi,KIRON4-2026-06-29-285600-3014,151297672,1st Innings 6s Over/Under (1.5),2,Under,1,1.09,9/100
+2026-06-29,04:56:00,Super Over Rajasthan v Delhi,KIRON4-2026-06-29-285600-3014,151297673,1st Innings 1st Wicket,2,Bowled,1,4.0,3/1
+2026-06-29,04:56:00,Super Over Rajasthan v Delhi,KIRON4-2026-06-29-285600-3014,151297674,2nd Innings 1st Wicket,4,Other,1,2.13,113/100
+2026-06-29,04:56:00,Super Over Rajasthan v Delhi,KIRON4-2026-06-29-285600-3014,151297675,1st Innings 1st Ball Outcome,2,Runs,1,1.5,1/2
+2026-06-29,04:56:00,Super Over Rajasthan v Delhi,KIRON4-2026-06-29-285600-3014,151297676,2nd Innings 1st Ball Outcome,2,Runs,1,1.65,13/20
+2026-06-29,05:00:00,Super Over Punjab v Chennai,KIRON4-2026-06-29-285601-3015,151297775,Match Result,2,Chennai wins the match,1,1.3,3/10
+2026-06-29,05:00:00,Super Over Punjab v Chennai,KIRON4-2026-06-29-285601-3015,151297776,Total Match Runs Over/Under (30.5),2,Under,1,1.51,51/100
+2026-06-29,05:00:00,Super Over Punjab v Chennai,KIRON4-2026-06-29-285601-3015,151297777,Total Match 4s Over/Under (2.5),2,Under,1,1.36,9/25
+2026-06-29,05:00:00,Super Over Punjab v Chennai,KIRON4-2026-06-29-285601-3015,151297778,Total Match 6s Over/Under (2.5),2,Under,1,1.24,6/25
+2026-06-29,05:00:00,Super Over Punjab v Chennai,KIRON4-2026-06-29-285601-3015,151297779,Innings most 4s,2,Same for both Innings,1,2.35,27/20
+2026-06-29,05:00:00,Super Over Punjab v Chennai,KIRON4-2026-06-29-285601-3015,151297780,Innings most 6s,2,Same for both Innings,1,1.97,97/100
+2026-06-29,05:00:00,Super Over Punjab v Chennai,KIRON4-2026-06-29-285601-3015,151297781,Total Match Boundaries,2,2-3,1,2.19,119/100
+2026-06-29,05:00:00,Super Over Punjab v Chennai,KIRON4-2026-06-29-285601-3015,151297782,Run-Out in the Match,1,Yes,1,1.84,21/25
+2026-06-29,05:00:00,Super Over Punjab v Chennai,KIRON4-2026-06-29-285601-3015,151297783,Total Match Wickets Over/Under (2.5),2,Under,1,1.63,63/100
+2026-06-29,05:00:00,Super Over Punjab v Chennai,KIRON4-2026-06-29-285601-3015,151297784,1st Innings Runs Over/Under (10.5),2,Under,1,3.06,103/50
+2026-06-29,05:00:00,Super Over Punjab v Chennai,KIRON4-2026-06-29-285601-3015,151297785,1st Innings 4s Over/Under (0.5),1,Over,1,1.17,17/100
+2026-06-29,05:00:00,Super Over Punjab v Chennai,KIRON4-2026-06-29-285601-3015,151297786,1st Innings 6s Over/Under (1.5),2,Under,1,1.23,23/100
+2026-06-29,05:00:00,Super Over Punjab v Chennai,KIRON4-2026-06-29-285601-3015,151297787,1st Innings 1st Wicket,4,Other,1,2.1,11/10
+2026-06-29,05:00:00,Super Over Punjab v Chennai,KIRON4-2026-06-29-285601-3015,151297788,2nd Innings 1st Wicket,4,Other,1,1.92,23/25
+2026-06-29,05:00:00,Super Over Punjab v Chennai,KIRON4-2026-06-29-285601-3015,151297789,1st Innings 1st Ball Outcome,2,Runs,1,1.48,12/25
+2026-06-29,05:00:00,Super Over Punjab v Chennai,KIRON4-2026-06-29-285601-3015,151297790,2nd Innings 1st Ball Outcome,2,Runs,1,1.63,63/100
+2026-06-29,05:04:00,Super Over Kolkata v Mumbai,KIRON4-2026-06-29-285602-3016,151297884,Match Result,1,Kolkata wins the match,1,2.11,111/100
+2026-06-29,05:04:00,Super Over Kolkata v Mumbai,KIRON4-2026-06-29-285602-3016,151297885,Total Match Runs Over/Under (30.5),2,Under,1,1.39,39/100
+2026-06-29,05:04:00,Super Over Kolkata v Mumbai,KIRON4-2026-06-29-285602-3016,151297886,Total Match 4s Over/Under (2.5),2,Under,1,1.36,9/25
+2026-06-29,05:04:00,Super Over Kolkata v Mumbai,KIRON4-2026-06-29-285602-3016,151297887,Total Match 6s Over/Under (2.5),2,Under,1,1.17,17/100
+2026-06-29,05:04:00,Super Over Kolkata v Mumbai,KIRON4-2026-06-29-285602-3016,151297888,Innings most 4s,3,2nd Innings,1,2.86,93/50
+2026-06-29,05:04:00,Super Over Kolkata v Mumbai,KIRON4-2026-06-29-285602-3016,151297889,Innings most 6s,2,Same for both Innings,1,1.94,47/50
+2026-06-29,05:04:00,Super Over Kolkata v Mumbai,KIRON4-2026-06-29-285602-3016,151297890,Total Match Boundaries,1,0-1,1,24.0,23/1
+2026-06-29,05:04:00,Super Over Kolkata v Mumbai,KIRON4-2026-06-29-285602-3016,151297891,Run-Out in the Match,1,Yes,1,1.91,91/100
+2026-06-29,05:04:00,Super Over Kolkata v Mumbai,KIRON4-2026-06-29-285602-3016,151297892,Total Match Wickets Over/Under (2.5),1,Over,1,2.02,51/50
+2026-06-29,05:04:00,Super Over Kolkata v Mumbai,KIRON4-2026-06-29-285602-3016,151297893,1st Innings Runs Over/Under (15.5),2,Under,1,1.36,9/25
+2026-06-29,05:04:00,Super Over Kolkata v Mumbai,KIRON4-2026-06-29-285602-3016,151297894,1st Innings 4s Over/Under (0.5),2,Under,1,3.96,74/25
+2026-06-29,05:04:00,Super Over Kolkata v Mumbai,KIRON4-2026-06-29-285602-3016,151297895,1st Innings 6s Over/Under (1.5),2,Under,1,1.11,11/100
+2026-06-29,05:04:00,Super Over Kolkata v Mumbai,KIRON4-2026-06-29-285602-3016,151297896,1st Innings 1st Wicket,4,Other,1,2.0,1/1
+2026-06-29,05:04:00,Super Over Kolkata v Mumbai,KIRON4-2026-06-29-285602-3016,151297897,2nd Innings 1st Wicket,4,Other,1,2.23,123/100
+2026-06-29,05:04:00,Super Over Kolkata v Mumbai,KIRON4-2026-06-29-285602-3016,151297898,1st Innings 1st Ball Outcome,2,Runs,1,1.53,53/100
+2026-06-29,05:04:00,Super Over Kolkata v Mumbai,KIRON4-2026-06-29-285602-3016,151297899,2nd Innings 1st Ball Outcome,2,Runs,1,1.63,63/100
+2026-06-29,05:08:00,Super Over Hyderabad v Bangalore,KIRON4-2026-06-29-285603-3017,151298010,Match Result,2,Bangalore wins the match,1,1.26,13/50
+2026-06-29,05:08:00,Super Over Hyderabad v Bangalore,KIRON4-2026-06-29-285603-3017,151298011,Total Match Runs Over/Under (30.5),1,Over,1,2.12,28/25
+2026-06-29,05:08:00,Super Over Hyderabad v Bangalore,KIRON4-2026-06-29-285603-3017,151298012,Total Match 4s Over/Under (2.5),1,Over,1,2.5,3/2
+2026-06-29,05:08:00,Super Over Hyderabad v Bangalore,KIRON4-2026-06-29-285603-3017,151298013,Total Match 6s Over/Under (2.5),1,Over,1,3.02,101/50
+2026-06-29,05:08:00,Super Over Hyderabad v Bangalore,KIRON4-2026-06-29-285603-3017,151298014,Innings most 4s,3,2nd Innings,1,2.68,42/25
+2026-06-29,05:08:00,Super Over Hyderabad v Bangalore,KIRON4-2026-06-29-285603-3017,151298015,Innings most 6s,2,Same for both Innings,1,1.98,49/50
+2026-06-29,05:08:00,Super Over Hyderabad v Bangalore,KIRON4-2026-06-29-285603-3017,151298016,Total Match Boundaries,4,6+,1,3.62,131/50
+2026-06-29,05:08:00,Super Over Hyderabad v Bangalore,KIRON4-2026-06-29-285603-3017,151298017,Run-Out in the Match,1,Yes,1,1.93,93/100
+2026-06-29,05:08:00,Super Over Hyderabad v Bangalore,KIRON4-2026-06-29-285603-3017,151298018,Total Match Wickets Over/Under (2.5),2,Under,1,1.47,47/100
+2026-06-29,05:08:00,Super Over Hyderabad v Bangalore,KIRON4-2026-06-29-285603-3017,151298019,1st Innings Runs Over/Under (10.5),1,Over,1,1.35,7/20
+2026-06-29,05:08:00,Super Over Hyderabad v Bangalore,KIRON4-2026-06-29-285603-3017,151298020,1st Innings 4s Over/Under (0.5),1,Over,1,1.2,1/5
+2026-06-29,05:08:00,Super Over Hyderabad v Bangalore,KIRON4-2026-06-29-285603-3017,151298021,1st Innings 6s Over/Under (1.5),1,Over,1,3.77,277/100
+2026-06-29,05:08:00,Super Over Hyderabad v Bangalore,KIRON4-2026-06-29-285603-3017,151298022,1st Innings 1st Wicket,4,Other,1,2.05,21/20
+2026-06-29,05:08:00,Super Over Hyderabad v Bangalore,KIRON4-2026-06-29-285603-3017,151298023,2nd Innings 1st Wicket,2,Bowled,1,4.74,187/50
+2026-06-29,05:08:00,Super Over Hyderabad v Bangalore,KIRON4-2026-06-29-285603-3017,151298024,1st Innings 1st Ball Outcome,5,No-Ball,1,14.0,13/1
+2026-06-29,05:08:00,Super Over Hyderabad v Bangalore,KIRON4-2026-06-29-285603-3017,151298025,2nd Innings 1st Ball Outcome,2,Runs,1,1.59,59/100
+2026-06-29,05:12:00,Super Over Rajasthan v Lucknow,KIRON4-2026-06-29-285604-3018,151298122,Match Result,2,Lucknow wins the match,1,1.54,27/50
+2026-06-29,05:12:00,Super Over Rajasthan v Lucknow,KIRON4-2026-06-29-285604-3018,151298123,Total Match Runs Over/Under (30.5),1,Over,1,2.1,11/10
+2026-06-29,05:12:00,Super Over Rajasthan v Lucknow,KIRON4-2026-06-29-285604-3018,151298124,Total Match 4s Over/Under (2.5),2,Under,1,1.41,41/100
+2026-06-29,05:12:00,Super Over Rajasthan v Lucknow,KIRON4-2026-06-29-285604-3018,151298125,Total Match 6s Over/Under (2.5),1,Over,1,2.95,39/20
+2026-06-29,05:12:00,Super Over Rajasthan v Lucknow,KIRON4-2026-06-29-285604-3018,151298126,Innings most 4s,2,Same for both Innings,1,2.41,141/100
+2026-06-29,05:12:00,Super Over Rajasthan v Lucknow,KIRON4-2026-06-29-285604-3018,151298127,Innings most 6s,1,1st Innings,1,2.6,8/5
+2026-06-29,05:12:00,Super Over Rajasthan v Lucknow,KIRON4-2026-06-29-285604-3018,151298128,Total Match Boundaries,2,2-3,1,2.04,26/25
+2026-06-29,05:12:00,Super Over Rajasthan v Lucknow,KIRON4-2026-06-29-285604-3018,151298129,Run-Out in the Match,1,Yes,1,1.82,41/50
+2026-06-29,05:12:00,Super Over Rajasthan v Lucknow,KIRON4-2026-06-29-285604-3018,151298130,Total Match Wickets Over/Under (2.5),2,Under,1,1.57,57/100
+2026-06-29,05:12:00,Super Over Rajasthan v Lucknow,KIRON4-2026-06-29-285604-3018,151298131,1st Innings Runs Over/Under (10.5),1,Over,1,1.26,13/50
+2026-06-29,05:12:00,Super Over Rajasthan v Lucknow,KIRON4-2026-06-29-285604-3018,151298132,1st Innings 4s Over/Under (0.5),2,Under,1,3.86,143/50
+2026-06-29,05:12:00,Super Over Rajasthan v Lucknow,KIRON4-2026-06-29-285604-3018,151298133,1st Innings 6s Over/Under (1.5),1,Over,1,3.18,109/50
+2026-06-29,05:12:00,Super Over Rajasthan v Lucknow,KIRON4-2026-06-29-285604-3018,151298134,1st Innings 1st Wicket,1,None,1,5.42,221/50
+2026-06-29,05:12:00,Super Over Rajasthan v Lucknow,KIRON4-2026-06-29-285604-3018,151298135,2nd Innings 1st Wicket,4,Other,1,1.98,49/50
+2026-06-29,05:12:00,Super Over Rajasthan v Lucknow,KIRON4-2026-06-29-285604-3018,151298136,1st Innings 1st Ball Outcome,2,Runs,1,1.44,11/25
+2026-06-29,05:12:00,Super Over Rajasthan v Lucknow,KIRON4-2026-06-29-285604-3018,151298137,2nd Innings 1st Ball Outcome,2,Runs,1,1.58,29/50
+2026-06-29,05:16:00,Super Over Gujarat v Punjab,KIRON4-2026-06-29-285605-3019,151298234,Match Result,2,Punjab wins the match,1,2.12,28/25
+2026-06-29,05:16:00,Super Over Gujarat v Punjab,KIRON4-2026-06-29-285605-3019,151298235,Total Match Runs Over/Under (30.5),2,Under,1,1.38,19/50
+2026-06-29,05:16:00,Super Over Gujarat v Punjab,KIRON4-2026-06-29-285605-3019,151298236,Total Match 4s Over/Under (2.5),1,Over,1,2.62,81/50
+2026-06-29,05:16:00,Super Over Gujarat v Punjab,KIRON4-2026-06-29-285605-3019,151298237,Total Match 6s Over/Under (2.5),2,Under,1,1.17,17/100
+2026-06-29,05:16:00,Super Over Gujarat v Punjab,KIRON4-2026-06-29-285605-3019,151298238,Innings most 4s,1,1st Innings,1,2.5,3/2
+2026-06-29,05:16:00,Super Over Gujarat v Punjab,KIRON4-2026-06-29-285605-3019,151298239,Innings most 6s,2,Same for both Innings,1,1.93,93/100
+2026-06-29,05:16:00,Super Over Gujarat v Punjab,KIRON4-2026-06-29-285605-3019,151298240,Total Match Boundaries,2,2-3,1,1.93,93/100
+2026-06-29,05:16:00,Super Over Gujarat v Punjab,KIRON4-2026-06-29-285605-3019,151298241,Run-Out in the Match,1,Yes,1,1.96,24/25
+2026-06-29,05:16:00,Super Over Gujarat v Punjab,KIRON4-2026-06-29-285605-3019,151298242,Total Match Wickets Over/Under (2.5),1,Over,1,2.04,26/25
+2026-06-29,05:16:00,Super Over Gujarat v Punjab,KIRON4-2026-06-29-285605-3019,151298243,1st Innings Runs Over/Under (15.5),2,Under,1,1.35,7/20
+2026-06-29,05:16:00,Super Over Gujarat v Punjab,KIRON4-2026-06-29-285605-3019,151298244,1st Innings 4s Over/Under (0.5),1,Over,1,1.11,11/100
+2026-06-29,05:16:00,Super Over Gujarat v Punjab,KIRON4-2026-06-29-285605-3019,151298245,1st Innings 6s Over/Under (1.5),2,Under,1,1.11,11/100
+2026-06-29,05:16:00,Super Over Gujarat v Punjab,KIRON4-2026-06-29-285605-3019,151298246,1st Innings 1st Wicket,2,Bowled,1,3.94,147/50
+2026-06-29,05:16:00,Super Over Gujarat v Punjab,KIRON4-2026-06-29-285605-3019,151298247,2nd Innings 1st Wicket,4,Other,1,2.15,23/20
+2026-06-29,05:16:00,Super Over Gujarat v Punjab,KIRON4-2026-06-29-285605-3019,151298248,1st Innings 1st Ball Outcome,3,Wicket,1,5.82,241/50
+2026-06-29,05:16:00,Super Over Gujarat v Punjab,KIRON4-2026-06-29-285605-3019,151298249,2nd Innings 1st Ball Outcome,2,Runs,1,1.65,13/20
+2026-06-29,05:20:00,Super Over Mumbai v Chennai,KIRON4-2026-06-29-285606-3020,151298339,Match Result,1,Mumbai wins the match,1,1.79,79/100
+2026-06-29,05:20:00,Super Over Mumbai v Chennai,KIRON4-2026-06-29-285606-3020,151298340,Total Match Runs Over/Under (20.5),2,Under,1,2.47,147/100
+2026-06-29,05:20:00,Super Over Mumbai v Chennai,KIRON4-2026-06-29-285606-3020,151298341,Total Match 4s Over/Under (2.5),2,Under,1,1.3,3/10
+2026-06-29,05:20:00,Super Over Mumbai v Chennai,KIRON4-2026-06-29-285606-3020,151298342,Total Match 6s Over/Under (2.5),2,Under,1,1.15,3/20
+2026-06-29,05:20:00,Super Over Mumbai v Chennai,KIRON4-2026-06-29-285606-3020,151298343,Innings most 4s,2,Same for both Innings,1,2.29,129/100
+2026-06-29,05:20:00,Super Over Mumbai v Chennai,KIRON4-2026-06-29-285606-3020,151298344,Innings most 6s,2,Same for both Innings,1,1.85,17/20
+2026-06-29,05:20:00,Super Over Mumbai v Chennai,KIRON4-2026-06-29-285606-3020,151298345,Total Match Boundaries,2,2-3,1,1.8,4/5
+2026-06-29,05:20:00,Super Over Mumbai v Chennai,KIRON4-2026-06-29-285606-3020,151298346,Run-Out in the Match,1,Yes,1,1.82,41/50
+2026-06-29,05:20:00,Super Over Mumbai v Chennai,KIRON4-2026-06-29-285606-3020,151298347,Total Match Wickets Over/Under (2.5),2,Under,1,1.64,16/25
+2026-06-29,05:20:00,Super Over Mumbai v Chennai,KIRON4-2026-06-29-285606-3020,151298348,1st Innings Runs Over/Under (15.5),2,Under,1,1.33,33/100
+2026-06-29,05:20:00,Super Over Mumbai v Chennai,KIRON4-2026-06-29-285606-3020,151298349,1st Innings 4s Over/Under (0.5),1,Over,1,1.12,3/25
+2026-06-29,05:20:00,Super Over Mumbai v Chennai,KIRON4-2026-06-29-285606-3020,151298350,1st Innings 6s Over/Under (1.5),2,Under,1,1.12,3/25
+2026-06-29,05:20:00,Super Over Mumbai v Chennai,KIRON4-2026-06-29-285606-3020,151298351,1st Innings 1st Wicket,3,Caught,1,3.95,59/20
+2026-06-29,05:20:00,Super Over Mumbai v Chennai,KIRON4-2026-06-29-285606-3020,151298352,2nd Innings 1st Wicket,4,Other,1,1.92,23/25
+2026-06-29,05:20:00,Super Over Mumbai v Chennai,KIRON4-2026-06-29-285606-3020,151298353,1st Innings 1st Ball Outcome,5,No-Ball,1,15.0,14/1
+2026-06-29,05:20:00,Super Over Mumbai v Chennai,KIRON4-2026-06-29-285606-3020,151298354,2nd Innings 1st Ball Outcome,2,Runs,1,1.67,67/100
