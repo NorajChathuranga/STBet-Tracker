@@ -25363,5 +25363,20 @@
     "most_6s": "1st Innings",
     "wickets_lost_ou": "N/A",
     "meeting_code": "KIRON4-2026-07-01-286646-3001"
+  },
+  {
+    "date": "2026-07-02",
+    "time": "04:08:00",
+    "match_name": "Super Over Kolkata v Mumbai",
+    "winner": "Kolkata wins the match",
+    "first_ball_1st_innings": "Runs",
+    "first_ball_2nd_innings": "Runs",
+    "total_runs_ou": "(30.5) - Over",
+    "total_4s_ou": "(2.5) - Over",
+    "total_6s_ou": "(2.5) - Under",
+    "most_4s": "1st Innings",
+    "most_6s": "Same for both Innings",
+    "wickets_lost_ou": "N/A",
+    "meeting_code": "KIRON4-2026-07-01-286647-3002"
   }
 ]
