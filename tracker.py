@@ -422,10 +422,61 @@ def check_and_update():
         print(f"[{datetime.now().strftime('%H:%M:%S')}] Error checking/updating: {e}")
         return False
 
+def is_pid_running(pid):
+    """Check if a process with the given PID is currently running (cross-platform)."""
+    if pid <= 0:
+        return False
+    if os.name == 'nt':
+        import subprocess
+        try:
+            out = subprocess.run(['tasklist', '/FI', f'PID eq {pid}'], capture_output=True, text=True)
+            return str(pid) in out.stdout
+        except Exception:
+            return True # Fallback to True to be safe
+    else:
+        import errno
+        try:
+            os.kill(pid, 0)
+        except OSError as err:
+            if err.errno == errno.ESRCH:
+                return False
+            return True # EPERM or other errors mean process is running but not signalable
+        return True
+
 def git_commit_and_push():
     """Automatically commit and push changes in data/ folder to GitHub if running locally or on a VM."""
     import subprocess
+    
+    # 1. Check if git index.lock exists (indicates Git is already working)
+    git_lock_path = os.path.join(WORKSPACE_DIR, '.git', 'index.lock')
+    if os.path.exists(git_lock_path):
+        print(f"[{datetime.now().strftime('%H:%M:%S')}] Git is currently busy (.git/index.lock exists). Skipping commit...")
+        return
+
+    # 2. Check and handle our custom commit lock file to prevent concurrent executions
+    commit_lock_path = os.path.join(WORKSPACE_DIR, 'git_commit.lock')
+    if os.path.exists(commit_lock_path):
+        try:
+            with open(commit_lock_path, 'r') as f:
+                pid = int(f.read().strip())
+            if is_pid_running(pid):
+                print(f"[{datetime.now().strftime('%H:%M:%S')}] Another git commit/push process (PID {pid}) is already running. Skipping...")
+                return
+            else:
+                print(f"[{datetime.now().strftime('%H:%M:%S')}] Stale commit lock file found (PID {pid} not running). Removing lock and proceeding...")
+                os.remove(commit_lock_path)
+        except Exception:
+            # If lock file is empty or corrupted, clean it
+            try:
+                os.remove(commit_lock_path)
+            except Exception:
+                pass
+
     try:
+        # Create our lock file
+        with open(commit_lock_path, 'w') as f:
+            f.write(str(os.getpid()))
+            
         # Check if git is initialized
         git_check = subprocess.run(['git', 'rev-parse', '--is-inside-work-tree'], capture_output=True, text=True, cwd=WORKSPACE_DIR)
         if git_check.returncode != 0:
@@ -475,6 +526,13 @@ def git_commit_and_push():
                 print("="*80 + "\n")
     except Exception as e:
         print(f"[{datetime.now().strftime('%H:%M:%S')}] Error auto-committing/pushing: {e}")
+    finally:
+        # Clean up our lock file
+        if os.path.exists(commit_lock_path):
+            try:
+                os.remove(commit_lock_path)
+            except Exception as e:
+                print(f"Error removing commit lock file: {e}")
 
 def main():
     load_env_file()
