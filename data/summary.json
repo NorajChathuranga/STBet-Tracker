@@ -25123,5 +25123,20 @@
     "most_6s": "Same for both Innings",
     "wickets_lost_ou": "N/A",
     "meeting_code": "KIRON4-2026-07-01-286630-3338"
+  },
+  {
+    "date": "2026-07-02",
+    "time": "02:36:00",
+    "match_name": "Super Over Rajasthan v Punjab",
+    "winner": "Punjab wins the match",
+    "first_ball_1st_innings": "No Runs",
+    "first_ball_2nd_innings": "Runs",
+    "total_runs_ou": "(25.5) - Over",
+    "total_4s_ou": "(2.5) - Over",
+    "total_6s_ou": "(2.5) - Under",
+    "most_4s": "2nd Innings",
+    "most_6s": "2nd Innings",
+    "wickets_lost_ou": "N/A",
+    "meeting_code": "KIRON4-2026-07-01-286631-3339"
   }
 ]
