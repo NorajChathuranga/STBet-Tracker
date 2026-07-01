@@ -507,6 +507,13 @@ def git_commit_and_push():
                 print(f"[{datetime.now().strftime('%H:%M:%S')}] Git commit failed: {commit_res.stderr.strip()}")
                 return
                 
+            # Pull latest changes from remote to keep VM in sync and prevent non-fast-forward errors
+            print(f"[{datetime.now().strftime('%H:%M:%S')}] Pulling latest remote changes (rebase)...")
+            pull_res = subprocess.run(['git', 'pull', '--rebase', 'origin', 'main'], capture_output=True, text=True, cwd=WORKSPACE_DIR)
+            if pull_res.returncode != 0:
+                print(f"[{datetime.now().strftime('%H:%M:%S')}] Git pull failed: {pull_res.stderr.strip()}")
+                return
+                
             # Push changes
             push_res = subprocess.run(['git', 'push'], capture_output=True, text=True, cwd=WORKSPACE_DIR)
             if push_res.returncode == 0:

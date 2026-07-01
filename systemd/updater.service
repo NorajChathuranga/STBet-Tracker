@@ -1,0 +1,18 @@
+[Unit]
+Description=STBet Auto-Updater Webhook FastAPI Service
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+WorkingDirectory=/home/ubuntu/STBet-Tracker
+ExecStart=/home/ubuntu/STBet-Tracker/.venv/bin/uvicorn updater.updater:app --host 127.0.0.1 --port 8000
+Restart=always
+RestartSec=5
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=stbet-updater
+Environment=PYTHONUNBUFFERED=1
+
+[Install]
+WantedBy=multi-user.target
