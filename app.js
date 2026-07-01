@@ -251,7 +251,10 @@ function buildFilters() {
     const filter1stBall = document.getElementById('filter1stBall');
     
     const uniqueWinners = [...new Set(summaryData.map(r => r.winner).filter(Boolean))].sort();
-    const unique1stBalls = [...new Set(summaryData.map(r => r.first_ball_1st_innings).filter(Boolean))].sort();
+    const unique1stBalls = [...new Set([
+        ...summaryData.map(r => r.first_ball_1st_innings),
+        ...summaryData.map(r => r.first_ball_2nd_innings)
+    ].filter(Boolean))].sort();
     
     // Clear dynamic options but keep "All"
     filterWinner.innerHTML = '<option value="all">All Winners</option>';
@@ -293,7 +296,9 @@ function filterSummaryTable() {
                             row.winner.toLowerCase().includes(searchVal);
         
         const matchesWinner = winnerVal === 'all' || row.winner === winnerVal;
-        const matches1stBall = firstBallVal === 'all' || row.first_ball_1st_innings === firstBallVal;
+        const matches1stBall = firstBallVal === 'all' || 
+                               row.first_ball_1st_innings === firstBallVal || 
+                               row.first_ball_2nd_innings === firstBallVal;
         
         return matchesSearch && matchesWinner && matches1stBall;
     });
