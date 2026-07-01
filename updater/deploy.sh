@@ -1,105 +1,55 @@
 #!/bin/bash
-# STBet-Tracker Auto-Deployment and Rollback script
-# This script can be executed manually for testing or updates.
-# Usage: ./deploy.sh [target_commit_or_branch]
+# STBet-Tracker Webhook Deployment Script
+# Automatically stops the service, pulls new code, installs deps, and restarts the service.
 
-set -e
-
-# Configuration
 REPO_DIR="/home/ubuntu/STBet-Tracker"
-TRACKER_SERVICE="tracker.service"
-HEALTH_CHECK_DELAY=5
+LOG_FILE="$REPO_DIR/updater/deploy.log"
+
+# Ensure log directory exists
+mkdir -p "$(dirname "$LOG_FILE")"
+
+# Redirect stdout and stderr to the log file
+exec >> "$LOG_FILE" 2>&1
+
+echo "=========================================================="
+echo "[$(date '+%Y-%m-%d %H:%M:%S')] Auto-update deployment triggered"
+echo "=========================================================="
 
 cd "$REPO_DIR"
 
-echo "[$(date '+%Y-%m-%d %H:%M:%S')] Starting deployment workflow..."
+# Ensure tracker service is restarted at the end of the deployment, regardless of success/failure
+ensure_restart() {
+    echo "[$(date '+%Y-%m-%d %H:%M:%S')] Starting stbet-tracker.service..."
+    sudo systemctl start stbet-tracker.service
+    echo "[$(date '+%Y-%m-%d %H:%M:%S')] Auto-update deployment finished."
+}
+trap ensure_restart EXIT
 
-# 1. Fetch current version for rollback
-PREV_COMMIT=$(git rev-parse HEAD)
-echo "Current commit: $PREV_COMMIT"
-
-# 2. Fetch remote changes
-echo "Fetching from origin..."
+# 1. Fetch remote changes to compare diffs
+echo "Fetching origin..."
 git fetch origin main
 
-# Determine target branch/commit
-TARGET=${1:-"origin/main"}
-TARGET_COMMIT=$(git rev-parse "$TARGET")
-echo "Target commit: $TARGET_COMMIT"
-
-# 3. Check if changes exist
-if [ "$PREV_COMMIT" = "$TARGET_COMMIT" ] && [ -z "$1" ]; then
-    echo "No new changes detected. Exiting deployment."
-    exit 0
-fi
-
-# Rollback handler function
-rollback() {
-    echo "=========================================================="
-    echo "FATAL: Deployment step failed. Triggering automatic rollback..."
-    echo "=========================================================="
-    
-    # Reset git back to starting commit
-    git reset --hard "$PREV_COMMIT"
-    
-    # Reinstall previous requirements
-    if [ -f ".venv/bin/pip" ]; then
-        .venv/bin/pip install -r requirements.txt
-    else
-        pip install -r requirements.txt
-    fi
-    
-    # Restart the previous tracker service
-    echo "Restoring previous service state..."
-    sudo systemctl restart "$TRACKER_SERVICE"
-    
-    echo "[$(date '+%Y-%m-%d %H:%M:%S')] Rollback complete. Original version restored."
-}
-
-# Trap any error and execute the rollback handler
-trap rollback ERR
-
-# 4. Pull code
-echo "Resetting repository code to target commit..."
-git reset --hard "$TARGET_COMMIT"
-
-# 5. Check if requirements changed and reinstall
+# Check if requirements.txt changed
 REQ_CHANGED=false
-if git diff --name-only "$PREV_COMMIT" "$TARGET_COMMIT" | grep -q "requirements.txt"; then
+if git diff --name-only HEAD origin/main | grep -q "requirements.txt"; then
     REQ_CHANGED=true
+    echo "requirements.txt changed. Dependency re-installation is marked."
 fi
 
+# 2. Stop tracker service
+echo "Stopping stbet-tracker.service..."
+sudo systemctl stop stbet-tracker.service
+
+# 3. Pull latest code from origin main
+echo "Pulling latest code..."
+git pull origin main
+
+# 4. If requirements.txt changed, install dependencies
 if [ "$REQ_CHANGED" = true ]; then
-    echo "requirements.txt changed. Installing dependencies..."
+    echo "Installing updated requirements..."
     if [ -f ".venv/bin/pip" ]; then
         .venv/bin/pip install -r requirements.txt
     else
         pip install -r requirements.txt
     fi
 fi
-
-# 6. Run database migration if migrate_db.py exists
-if [ -f "migrate_db.py" ]; then
-    echo "Running migrations..."
-    if [ -f ".venv/bin/python" ]; then
-        .venv/bin/python migrate_db.py
-    else
-        python3 migrate_db.py
-    fi
-fi
-
-# 7. Restart tracker service
-echo "Restarting service $TRACKER_SERVICE..."
-sudo systemctl restart "$TRACKER_SERVICE"
-
-# 8. Service health check
-echo "Waiting $HEALTH_CHECK_DELAY seconds for health check..."
-sleep $HEALTH_CHECK_DELAY
-
-STATUS=$(sudo systemctl is-active "$TRACKER_SERVICE")
-if [ "$STATUS" != "active" ]; then
-    echo "Health check failed: tracker.service is '$STATUS' (expected 'active')"
-    false # Trigger trap
-fi
-
-echo "[$(date '+%Y-%m-%d %H:%M:%S')] Deployment completed successfully!"
