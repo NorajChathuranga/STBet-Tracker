@@ -423,26 +423,56 @@ def check_and_update():
         return False
 
 def git_commit_and_push():
-    """Automatically commit and push changes in data/ folder to GitHub if running locally."""
+    """Automatically commit and push changes in data/ folder to GitHub if running locally or on a VM."""
     import subprocess
     try:
         # Check if git is initialized
-        git_check = subprocess.run(['git', 'rev-parse', '--is-inside-work-tree'], capture_output=True, text=True)
+        git_check = subprocess.run(['git', 'rev-parse', '--is-inside-work-tree'], capture_output=True, text=True, cwd=WORKSPACE_DIR)
         if git_check.returncode != 0:
             return # Not a git repository
             
+        # Ensure user.name and user.email are configured (common issue on fresh VMs)
+        email_check = subprocess.run(['git', 'config', 'user.email'], capture_output=True, text=True, cwd=WORKSPACE_DIR)
+        if not email_check.stdout.strip():
+            print(f"[{datetime.now().strftime('%H:%M:%S')}] Git email not configured. Setting a local default...")
+            subprocess.run(['git', 'config', '--local', 'user.email', 'tracker-bot@stbet.local'], check=True, cwd=WORKSPACE_DIR)
+            
+        name_check = subprocess.run(['git', 'config', 'user.name'], capture_output=True, text=True, cwd=WORKSPACE_DIR)
+        if not name_check.stdout.strip():
+            print(f"[{datetime.now().strftime('%H:%M:%S')}] Git name not configured. Setting a local default...")
+            subprocess.run(['git', 'config', '--local', 'user.name', 'STBet Tracker Bot'], check=True, cwd=WORKSPACE_DIR)
+
         # Check if there are changes in data/
-        status_check = subprocess.run(['git', 'status', '--porcelain', 'data/'], capture_output=True, text=True)
+        status_check = subprocess.run(['git', 'status', '--porcelain', 'data/'], capture_output=True, text=True, cwd=WORKSPACE_DIR)
         if status_check.stdout.strip():
             print(f"[{datetime.now().strftime('%H:%M:%S')}] Local changes detected in data/. Committing and pushing to GitHub...")
-            subprocess.run(['git', 'add', 'data/'], check=True, cwd=WORKSPACE_DIR)
-            subprocess.run(['git', 'commit', '-m', 'Auto-update match records (local source)'], check=True, cwd=WORKSPACE_DIR)
             
+            # Stage changes
+            subprocess.run(['git', 'add', 'data/'], check=True, cwd=WORKSPACE_DIR)
+            
+            # Commit changes
+            commit_res = subprocess.run(['git', 'commit', '-m', 'Auto-update match records (VM source)'], capture_output=True, text=True, cwd=WORKSPACE_DIR)
+            if commit_res.returncode != 0:
+                print(f"[{datetime.now().strftime('%H:%M:%S')}] Git commit failed: {commit_res.stderr.strip()}")
+                return
+                
+            # Push changes
             push_res = subprocess.run(['git', 'push'], capture_output=True, text=True, cwd=WORKSPACE_DIR)
             if push_res.returncode == 0:
                 print(f"[{datetime.now().strftime('%H:%M:%S')}] Successfully pushed new results to GitHub Pages!")
             else:
-                print(f"[{datetime.now().strftime('%H:%M:%S')}] Git push failed: {push_res.stderr.strip()}")
+                stderr_output = push_res.stderr.strip()
+                print(f"[{datetime.now().strftime('%H:%M:%S')}] Git push failed: {stderr_output}")
+                
+                # Troubleshooting advice for VM
+                print("\n" + "="*80)
+                print("GIT PUSH TROUBLESHOOTING HINT FOR VM ENVIRONMENT:")
+                print("If git push failed due to authentication, check the following options:")
+                print("Option A (Token Authentication): Add your Personal Access Token (PAT) to the remote URL:")
+                print("   git remote set-url origin https://<YOUR_GITHUB_TOKEN>@github.com/NorajChathuranga/STBet-Tracker.git")
+                print("Option B (SSH Key Authentication): Verify that your SSH keys are set up on the VM and registered on GitHub.")
+                print("   Then set remote to SSH: git remote set-url origin git@github.com:NorajChathuranga/STBet-Tracker.git")
+                print("="*80 + "\n")
     except Exception as e:
         print(f"[{datetime.now().strftime('%H:%M:%S')}] Error auto-committing/pushing: {e}")
 
