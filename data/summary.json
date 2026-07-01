@@ -25138,5 +25138,20 @@
     "most_6s": "2nd Innings",
     "wickets_lost_ou": "N/A",
     "meeting_code": "KIRON4-2026-07-01-286631-3339"
+  },
+  {
+    "date": "2026-07-02",
+    "time": "02:40:00",
+    "match_name": "Super Over Lucknow v Chennai",
+    "winner": "Lucknow wins the match",
+    "first_ball_1st_innings": "Runs",
+    "first_ball_2nd_innings": "Wicket",
+    "total_runs_ou": "(30.5) - Over",
+    "total_4s_ou": "(2.5) - Over",
+    "total_6s_ou": "(2.5) - Over",
+    "most_4s": "Same for both Innings",
+    "most_6s": "1st Innings",
+    "wickets_lost_ou": "N/A",
+    "meeting_code": "KIRON4-2026-07-01-286632-3340"
   }
 ]
