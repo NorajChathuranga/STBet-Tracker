@@ -2,7 +2,7 @@
 # STBet-Tracker Webhook Deployment Script
 # Automatically stops the service, pulls new code, installs deps, and restarts the service.
 
-REPO_DIR="/home/ubuntu/STBet-Tracker"
+REPO_DIR="/home/azureuser/STBet-Tracker"
 LOG_FILE="$REPO_DIR/updater/deploy.log"
 
 # Ensure log directory exists

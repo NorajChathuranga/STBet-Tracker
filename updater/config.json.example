@@ -1,6 +1,6 @@
 {
   "github_webhook_secret": "YOUR_GITHUB_WEBHOOK_HMAC_SECRET",
-  "repo_path": "/home/ubuntu/STBet-Tracker",
+  "repo_path": "/home/azureuser/STBet-Tracker",
   "tracker_service_name": "tracker.service",
   "health_check_delay": 5
 }

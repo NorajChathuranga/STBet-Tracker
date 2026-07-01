@@ -61,7 +61,7 @@ STBet-Tracker/
 ### 1. Requirements & Setup
 Clone the repository to your home folder on the Azure VM:
 ```bash
-cd /home/ubuntu
+cd /home/azureuser
 git clone https://github.com/YOUR_USERNAME/STBet-Tracker.git
 cd STBet-Tracker
 
@@ -96,13 +96,13 @@ sudo systemctl start stbet-tracker.service
 The auto-update system runs as a FastAPI service (`updater.service`) listening on port `8000` behind Nginx. It verifies HMAC webhook signatures sent by GitHub and triggers a deployment script.
 
 ### 1. Sudoers Setup
-To allow the updater (running under the `ubuntu` user) to stop and start the systemd tracker service without asking for a password, add a restricted rule:
+To allow the updater (running under the `azureuser` user) to stop and start the systemd tracker service without asking for a password, add a restricted rule:
 ```bash
 sudo visudo -f /etc/sudoers.d/stbet-updater
 ```
 Insert the following configuration:
 ```sudoers
-ubuntu ALL=(ALL) NOPASSWD: /usr/bin/systemctl stop stbet-tracker.service, /usr/bin/systemctl start stbet-tracker.service
+azureuser ALL=(ALL) NOPASSWD: /usr/bin/systemctl stop stbet-tracker.service, /usr/bin/systemctl start stbet-tracker.service
 ```
 
 ### 2. Service Registration
@@ -141,7 +141,7 @@ You can monitor deployment actions and scraping activities directly through syst
 
 ```bash
 # View Webhook deployment activities and pulls
-tail -f /home/ubuntu/STBet-Tracker/updater/deploy.log
+tail -f /home/azureuser/STBet-Tracker/updater/deploy.log
 
 # View Scraper logs
 journalctl -u stbet-tracker.service -n 100 -f
