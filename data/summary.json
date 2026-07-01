@@ -25348,5 +25348,20 @@
     "most_6s": "2nd Innings",
     "wickets_lost_ou": "N/A",
     "meeting_code": "KIRON4-2026-07-01-286645-3000"
+  },
+  {
+    "date": "2026-07-02",
+    "time": "04:04:00",
+    "match_name": "Super Over Punjab v Chennai",
+    "winner": "Chennai wins the match",
+    "first_ball_1st_innings": "Runs",
+    "first_ball_2nd_innings": "No-Ball",
+    "total_runs_ou": "(30.5) - Over",
+    "total_4s_ou": "(2.5) - Over",
+    "total_6s_ou": "(2.5) - Under",
+    "most_4s": "Same for both Innings",
+    "most_6s": "1st Innings",
+    "wickets_lost_ou": "N/A",
+    "meeting_code": "KIRON4-2026-07-01-286646-3001"
   }
 ]
