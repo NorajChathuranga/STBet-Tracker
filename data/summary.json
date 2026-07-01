@@ -24163,5 +24163,20 @@
     "most_6s": "2nd Innings",
     "wickets_lost_ou": "N/A",
     "meeting_code": "KIRON4-2026-07-01-286566-3274"
+  },
+  {
+    "date": "2026-07-01",
+    "time": "22:20:00",
+    "match_name": "Super Over Bangalore v Delhi",
+    "winner": "Bangalore wins the match",
+    "first_ball_1st_innings": "Runs",
+    "first_ball_2nd_innings": "Runs",
+    "total_runs_ou": "(30.5) - Under",
+    "total_4s_ou": "(2.5) - Over",
+    "total_6s_ou": "(2.5) - Under",
+    "most_4s": "Same for both Innings",
+    "most_6s": "1st Innings",
+    "wickets_lost_ou": "N/A",
+    "meeting_code": "KIRON4-2026-07-01-286567-3275"
   }
 ]
